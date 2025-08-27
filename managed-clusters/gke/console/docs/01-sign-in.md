@@ -14,7 +14,7 @@ Note that if you are already signed into your browser with a Google account, it 
 
 Prerequisite: Premium KodeKloud subscription
 
-Access this link: https://kodekloud.com/playgrounds/playground-google-cloud and click `START LAB` to request a new GCP Playground instance. After a few seconds, you will receive your temporary GCP portal account like this:
+Access this link: <https://kodekloud.com/playgrounds/playground-google-cloud> and click `START LAB` to request a new GCP Playground instance. After a few seconds, you will receive your temporary GCP portal account like this:
 
 ![image](../images/01-sign-in.png)
 
@@ -23,6 +23,3 @@ Copy the **Console Link** by pressing the copy button to the right of it, paste 
 In the dialog box that follows, select your country and agree to terms of service. Leave **Email updates** unchecked.
 
 Next: [Provisioning the Cluster](./02-create-cluster.md)
-
-
-

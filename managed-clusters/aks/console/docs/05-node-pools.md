@@ -12,8 +12,7 @@
 
     ![image](../images/05a-node-pools.png)
 
-
-1.  You are now in the **Update Node Pool** screen
+1. You are now in the **Update Node Pool** screen
 
     1. Click on **Choose a size**
 
@@ -27,10 +26,6 @@
 
     1. Next to **Scale Method** click in `Manual` radio button, then change **Node count** to `2`
 
-
     1. Press the `Update` button at the bottom of the screen to complete pool configuration.
 
-
 Next: [Networking](./06-networking.md)
-
-

@@ -1,6 +1,6 @@
 # Persistent Volumes
 
-  - Take me to [Lecture](https://kodekloud.com/topic/persistent-volumes-4/)
+- Take me to [Lecture](https://kodekloud.com/topic/persistent-volumes-4/)
 
 In this section, we will take a look at **Persistent Volumes**
 
@@ -8,7 +8,6 @@ In this section, we will take a look at **Persistent Volumes**
 - Whatever storage solution is used, the users who deploys the pods would have to configure that on all pod definition files in his environment. Every time a change is to be made, the user would have to make them on all of his pods.
 
 ![class-16](../../images/class16.PNG)
-
 
 - A Persistent Volume is a cluster-wide pool of storage volumes configured by an administrator to be used by users deploying application on the cluster. The users can now select storage from this pool using Persistent Volume Claims.
 
@@ -41,6 +40,5 @@ In this section, we will take a look at **Persistent Volumes**
 
 #### Kubernetes Persistent Volumes
 
-- https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-- https://portworx.com/tutorial-kubernetes-persistent-volumes/
-
+- <https://kubernetes.io/docs/concepts/storage/persistent-volumes/>
+- <https://portworx.com/tutorial-kubernetes-persistent-volumes/>

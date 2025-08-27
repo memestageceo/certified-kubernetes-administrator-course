@@ -13,8 +13,3 @@
 
 Prev: [Configure Cluster](./03-configure-cluster.md)<br/>
 Next: [Create Cluster](./05-create-cluster.md)
-
-
-
-
-

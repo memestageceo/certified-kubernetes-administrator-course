@@ -1,6 +1,5 @@
 # Mock Exam 2 Solution
   
-  
   1. Run the below command for solution:
 
      <details>
@@ -8,12 +7,13 @@
      ```
      ETCDCTL_API=3 etcdctl snapshot save --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --endpoints=127.0.0.1:2379 /opt/etcd-backup.db
      ```
+
      </details>
 
   2. Run the below command for solution:
 
      <details>
- 
+
      ```
      apiVersion: v1
      kind: Pod
@@ -38,8 +38,9 @@
       restartPolicy: Always
      status: {}
      ```
+
      </details>
- 
+
   3. Run the below command for solution:
 
      <details>
@@ -59,12 +60,13 @@
            capabilities:
              add: ["SYS_TIME"]
      ```
+
      </details>
 
   4. Run the below command for solution:
 
      <details>
-     
+
      ```
      apiVersion: v1
      kind: PersistentVolumeClaim
@@ -77,7 +79,7 @@
          requests:
            storage: 10Mi      
      ```
-    
+
      ```
      apiVersion: v1
      kind: Pod
@@ -98,23 +100,24 @@
          persistentVolumeClaim:
            claimName: my-pvc
      ```
+
      </details>
 
   5. Run the below command for solution:
 
      <details>
- 
+
      For Kubernetes Version <=1.17
- 
+
      ```
      kubectl run nginx-deploy --image=nginx:1.16 --replicas=1 --record
      kubectl rollout history deployment nginx-deploy
      kubectl set image deployment/nginx-deploy nginx=nginx:1.17 --record
      kubectl rollout history deployment nginx-deploy
      ```
- 
+
      For Kubernetes Version >1.17
- 
+
      ```
      kubectl create deployment nginx-deploy --image=nginx:1.16 --dry-run=client -o yaml > deploy.yaml
    
@@ -138,19 +141,20 @@
            - image: nginx:1.16
              name: nginx
      ```
-     
+
      ```
      kubectl create -f deploy.yaml --record
      kubectl rollout history deployment nginx-deploy
      kubectl set image deployment/nginx-deploy nginx=nginx:1.17 --record
      kubectl rollout history deployment nginx-deploy
      ```
+
      </details>
   
   6. Run the below command for solution:
 
      <details>
- 
+
      ```
       apiVersion: certificates.k8s.io/v1
       kind: CertificateSigningRequest
@@ -166,7 +170,7 @@
         groups:
         - system:authenticated
        ```
- 
+
       ```
       kubectl certificate approve john-developer
       kubectl create role developer --resource=pods --verb=create,list,get,update,delete --namespace=development
@@ -175,11 +179,11 @@
       ```
   
      </details>
- 
+
   7. Run the below command for solution:
 
      <details>
- 
+
      ```
      kubectl run nginx-resolver --image=nginx
      kubectl expose pod nginx-resolver --name=nginx-resolver-service --port=80 --target-port=80 --type=ClusterIP
@@ -192,13 +196,13 @@
      kubectl run test-nslookup --image=busybox:1.28 --rm -it --restart=Never -- nslookup <P-O-D-I-P.default.pod> > /root/CKA/nginx.pod
  
      ```
- 
+
      </details>
 
   8. Run the below command for solution:
 
      <details>
- 
+
      ```
      kubectl run nginx-critical --image=nginx --dry-run=client -o yaml > static.yaml
      
@@ -222,8 +226,5 @@
  
      kubectl get pods 
      ```
- 
+
      </details>
-
-  
-

@@ -1,5 +1,6 @@
 # Practice Test - Network Policies
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-network-policies/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-network-policies/)
 
 Solutions to practice test - network policies
 
@@ -8,17 +9,17 @@ Solutions to practice test - network policies
   <details>
   
   ```
-  $ kubectl get networkpolicy
+  kubectl get networkpolicy
   ```
   
   </details>
   
 - Run the command 'kubectl get networkpolicy'
-   
+
   <details>
   
   ```
-  $ kubectl get networkpolicy
+  kubectl get networkpolicy
   ```
   
   </details>
@@ -28,7 +29,7 @@ Solutions to practice test - network policies
   <details>
   
   ```
-  $ kubectl get networkpolicy
+  kubectl get networkpolicy
   ```
   
   </details>
@@ -38,7 +39,7 @@ Solutions to practice test - network policies
   <details>
   
   ```
-  $ kubectl describe networkpolicy
+  kubectl describe networkpolicy
   ```
   
   </details>
@@ -82,9 +83,8 @@ Solutions to practice test - network policies
   <details>
   
   ```
-  $ kubectl create -f /var/answers/answer-internal-policy.yaml
+  kubectl create -f /var/answers/answer-internal-policy.yaml
   ```
   
   </details>
-  
   

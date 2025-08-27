@@ -4,18 +4,19 @@ To create a highly available control plane, we install kubeadm on the first cont
 
 ## controlplane01
 
-1.  ssh to `controlplane01`
+1. ssh to `controlplane01`
 
     ```bash
     ssh controlplane01
     ```
 
 1. Become root
+
     ```bash
     sudo -i
     ```
 
-1.  Set shell variable for the pod network CIDR.
+1. Set shell variable for the pod network CIDR.
 
     ```bash
     POD_CIDR=192.168.0.0/16
@@ -40,24 +41,25 @@ To create a highly available control plane, we install kubeadm on the first cont
     Copy both join commands that are printed to a notepad for use on other control nodes and the worker nodes.
 
 1. Install network plugin (calico). Weave does not work too well with HA clusters.
+
     ```bash
     kubectl --kubeconfig /etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.3/manifests/tigera-operator.yaml
     kubectl --kubeconfig /etc/kubernetes/admin.conf create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.3/manifests/custom-resources.yaml
     ```
 
-1.  Check we are up and running
+1. Check we are up and running
 
     ```bash
     kubectl --kubeconfig /etc/kubernetes/admin.conf get pods -n kube-system
     ```
 
-1.  Exit root shell
+1. Exit root shell
 
     ```bash
     exit
     ```
 
-1.  Prepare the kubeconfig file for copying to `student-node` node, which is where we will run future `kubectl` commands from.
+1. Prepare the kubeconfig file for copying to `student-node` node, which is where we will run future `kubectl` commands from.
 
     ```bash
     {
@@ -66,7 +68,7 @@ To create a highly available control plane, we install kubeadm on the first cont
     }
     ```
 
-1.  Exit to `student-node`
+1. Exit to `student-node`
 
     ```bash
     exit
@@ -86,21 +88,22 @@ Be on `student-node`
 
 For each of `controlplane02` and `controlplane03`
 
-1.  SSH to `controlplane02`
-1.  Become root
+1. SSH to `controlplane02`
+1. Become root
 
     ```bash
     sudo -i
     ```
-1.  Paste the join command for *control* nodes that was output by `kubeadm init` on `controlplane01`
-1.  Exit back to `student-node`
+
+1. Paste the join command for *control* nodes that was output by `kubeadm init` on `controlplane01`
+1. Exit back to `student-node`
+
     ```bash
     exit
     exit
     ```
+
 1. Repeat the steps 2,3 and 4 on `controlplane03`
 
 Next: [Worker setup](./07-workers.md)</br>
 Prev: [Node Setup](./05-node-setup.md)
-
-

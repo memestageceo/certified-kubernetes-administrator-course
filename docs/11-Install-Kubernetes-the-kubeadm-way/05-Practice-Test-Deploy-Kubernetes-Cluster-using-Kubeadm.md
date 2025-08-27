@@ -7,13 +7,13 @@ If you want to build your own cluster, check these out:
 
 # Solutions for KodeKloud lab practice test - Install Using Kubeadm
 
-- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-deploy-a-kubernetes-cluster-using-kubeadm/)
+* Take me to [Practice Test](https://kodekloud.com/topic/practice-test-deploy-a-kubernetes-cluster-using-kubeadm/)
 
 In this practice lab, the container runtime (containerd) has already been installed. We only need to focus on the remaining node configuration, that is the kernel module and parameter settings, and installing the kubeadm cluster itself.
 
 Note that the video preceding this lab is out of date and is still using docker container driver and an out of date Kubernetes version. The lab is up to date.
 
-  1.  <details>
+  1. <details>
       <summary>Install the kubeadm, kubelet and kubectl packages at exact version 1.24.0 on the controlplane and node01.</summary>
 
       Run the following two steps on both `controlplane` and `node01` (use `ssh node01` to get to the worker node).
@@ -58,9 +58,10 @@ Note that the video preceding this lab is out of date and is still using docker 
 
          apt-mark hold kubelet kubeadm kubectl
          ```
+
       </details>
 
-  1.  <details>
+  1. <details>
       <summary>What is the version of kubelet installed?</summary>
 
       ```
@@ -71,7 +72,7 @@ Note that the video preceding this lab is out of date and is still using docker 
 
       </details>
 
-  1.  <details>
+  1. <details>
       <summary>How many nodes are part of kubernetes cluster currently?</summary>
 
       Are you able to run `kubectl get nodes`? Have you run `kubeadm init` yet?
@@ -82,15 +83,15 @@ Note that the video preceding this lab is out of date and is still using docker 
 
       </details>
 
-  1.  Information only
+  1. Information only
 
-  1.  <details>
+  1. <details>
       <summary>Initialize Control Plane Node (Master Node).</summary>
 
       Use the following options:
 
       * `apiserver-advertise-address` - Use the IP address allocated to eth0 on the controlplane node
-      * `apiserver-cert-extra-sans`` - Set it to `controlplane`
+      * `apiserver-cert-extra-sans`` - Set it to`controlplane`
       * `pod-network-cidr` - Set to `10.244.0.0/16`
 
       Once done, set up the default kubeconfig file and wait for node to be part of the cluster.
@@ -123,7 +124,7 @@ Note that the video preceding this lab is out of date and is still using docker 
 
       </details>
 
-  1.  <details>
+  1. <details>
       <summary>Generate a kubeadm join token</summary>
 
       You can copy the join command output by `kubeadm init` which looks like
@@ -137,7 +138,7 @@ Note that the video preceding this lab is out of date and is still using docker 
 
       </details>
 
-  1.  <details>
+  1. <details>
       <summary>Join node01 to the cluster using the join token</summary>
 
       1. `ssh` onto `node01` and paste the join command from above
@@ -146,7 +147,7 @@ Note that the video preceding this lab is out of date and is still using docker 
 
       </details>
 
-  1.  <details>
+  1. <details>
       <summary>Install a Network Plugin</summary>
 
       1. Install flannel
@@ -160,8 +161,3 @@ Note that the video preceding this lab is out of date and is still using docker 
       2. Wait 30 seconds or so, then run `kubectl get nodes`. Nodes should now be ready.
 
       </details>
-
-
-
-
-

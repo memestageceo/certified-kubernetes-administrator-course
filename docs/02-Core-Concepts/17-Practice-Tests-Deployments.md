@@ -1,7 +1,9 @@
 # Practice Test - Deployments
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-tests-deployments/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-tests-deployments/)
 
 Solutions to the deployments practice test
+
 1. <details>
    <summary>How many pods exist on the system?</summary>
 
@@ -88,6 +90,7 @@ Solutions to the deployments practice test
    ```
    kubectl get deployment -o wide
    ```
+
    </details>
 
 1. <details>
@@ -151,5 +154,5 @@ Solutions to the deployments practice test
    ```
    kubectl create deployment httpd-frontend --image=httpd:2.4-alpine --replicas=3
    ```
-   </details>
 
+   </details>

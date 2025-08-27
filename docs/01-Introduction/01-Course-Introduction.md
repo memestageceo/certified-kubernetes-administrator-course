@@ -1,29 +1,29 @@
 # Course Introduction
 
-  - Take me to the [Video Tutorial](https://kodekloud.com/topic/course-introduction-5/)
+- Take me to the [Video Tutorial](https://kodekloud.com/topic/course-introduction-5/)
 
-#### This course focuses on Administration part of the kubernetes. 
+#### This course focuses on Administration part of the kubernetes
 
 ## Course Structure
 
-   - Lectures
-   - Demos
-   - Quizzes
-   - Practice Questions
-   - Q & A Section
-   
+- Lectures
+- Demos
+- Quizzes
+- Practice Questions
+- Q & A Section
+
 ## Pre-Requisites
- 
-   - Docker
-   - Basics of kubernetes
-     - PODS, Deployments, Services ...
-   - YAML
-   - Setting up a basic lab environment with VirtualBox
-   
+
+- Docker
+- Basics of kubernetes
+  - PODS, Deployments, Services ...
+- YAML
+- Setting up a basic lab environment with VirtualBox
+
 #### If you are a beginner we highly recommend Kubernetes for the Absolute Beginners Hands-On course
 
-   - Take me to the [Kubernetes for the Absolute Beginners Hands-On Course](https://kodekloud.com/courses/kubernetes-for-the-absolute-beginners-hands-on/)
-   
+- Take me to the [Kubernetes for the Absolute Beginners Hands-On Course](https://kodekloud.com/courses/kubernetes-for-the-absolute-beginners-hands-on/)
+
 ## Course Objectives
 
 The objectives of this course are aligned to match the **`Certified Kubernetes Administration Exam (CKA)`**
@@ -54,15 +54,15 @@ The objectives of this course are aligned to match the **`Certified Kubernetes A
   - Cluster Upgrade Process
   - Operating System Upgrades
   - Backup and Restore Methodologies
- - Security
-   - Authentication & Authorization
-   - Kubernetes Security
-   - Network Policies
-   - TLS Certificates for Cluster Components
-   - Image Security
-   - Network Policies
-   - Security Contexts
-   - Secure Persistent Key Value Store
+- Security
+  - Authentication & Authorization
+  - Kubernetes Security
+  - Network Policies
+  - TLS Certificates for Cluster Components
+  - Image Security
+  - Network Policies
+  - Security Contexts
+  - Secure Persistent Key Value Store
 - Storage
   - Persistent Volumes
   - Access Modes for Volumes
@@ -70,7 +70,7 @@ The objectives of this course are aligned to match the **`Certified Kubernetes A
   - Kubernetes Storage Object
   - Configure Applications with Persistent Storage
 - Networking
-  - Pre-Requisites - Network, Switching, Routing, Tools 
+  - Pre-Requisites - Network, Switching, Routing, Tools
   - Pre-Requisites - Network Namespaces
   - Pre-Requisites - Networking in Docker
   - Networking Configuration on Cluster Nodes
@@ -103,4 +103,4 @@ CKA exam is a practical hands-on exam it is very important to practice what you 
   
 ## Kubernetes the hard way
 
-   - Take me to [Kubernetes The Hard way on VirtualBox](https://github.com/mmumshad/kubernetes-the-hard-way)
+- Take me to [Kubernetes The Hard way on VirtualBox](https://github.com/mmumshad/kubernetes-the-hard-way)

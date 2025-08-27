@@ -1,8 +1,8 @@
 # Practice Test CoreDNS in Kubernetes
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-coredns-in-kubernetes/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-coredns-in-kubernetes/)
 
-#### Solution 
+#### Solution
 
   1. Check the Solution
 
@@ -11,6 +11,7 @@
       ```
       CoreDNS
       ```
+
      </details>
   
   2. Check the Solution
@@ -20,6 +21,7 @@
       ```
       2
       ```
+
      </details>
 
   3. Check the Solution
@@ -29,6 +31,7 @@
       ```
       10.96.0.10
       ```
+
      </details>
 
   4. Check the Solution
@@ -42,6 +45,7 @@
 
       kubectl -n kube-system describe deployments.apps coredns | grep -A2 Args | grep Corefile
       ```
+
      </details>
 
   5. Check the Solution
@@ -51,6 +55,7 @@
       ```
       Configured as a ConfigMapObject
       ```
+
      </details>
 
   6. Check the Solution
@@ -60,6 +65,7 @@
       ```
       CoreDNS
       ```
+
      </details>
 
   7. Check the Solution
@@ -69,6 +75,7 @@
       ```
       coredns
       ```
+
      </details>
 
   8. Check the Solution
@@ -78,6 +85,7 @@
       ```
       cluster.local
       ```
+
      </details>
 
   9. Check the Solution
@@ -87,6 +95,7 @@
       ```
       Ok
       ```
+
      </details>
 
   10. Check the Solution
@@ -96,39 +105,43 @@
        ```
        web-service
        ```
+
       </details>
 
   11. Check the Solution
 
       <details>
- 
+
        ```
        web-serivce.default.pod
        ```
+
       </details>
 
   12. Check the Solution
 
       <details>
- 
+
        ```
        web-service.payroll
        ```
+
       </details>
 
   13. Check the Solution
 
       <details>
- 
+
        ```
        web-service.payroll.svc.cluster
        ```
+
       </details>
 
   14. Check the Solution
 
       <details>
- 
+
        ```
        kubectl edit deploy webapp
  
@@ -140,13 +153,15 @@
            - name: DB_Host
              value: mysql.payroll
        ```
+
       </details>
- 
+
   15. Check the Solution
 
       <details>
- 
+
        ```
        kubectl exec -it hr -- nslookup mysql.payroll > /root/nslookup.out
        ```
+
       </details>

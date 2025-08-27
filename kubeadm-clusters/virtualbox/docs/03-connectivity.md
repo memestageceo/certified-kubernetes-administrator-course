@@ -39,6 +39,5 @@ Now try logging into the machine, with:   "ssh 'vagrant@node01'"
 and check to make sure that only the key(s) you wanted were added.
 ```
 
-
 Next: [Node Setup](../../generic/04-node-setup.md)<br>
 Prev: [Compute Resources](02-compute-resources.md)

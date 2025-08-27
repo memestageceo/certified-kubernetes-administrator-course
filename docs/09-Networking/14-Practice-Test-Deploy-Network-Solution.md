@@ -1,6 +1,6 @@
 # Practice Test - Deploy Networking Solution
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-deploy-network-solution/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-deploy-network-solution/)
 
 #### Solution
 

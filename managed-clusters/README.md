@@ -9,13 +9,12 @@ Depending on the options chosen when creating, the worker nodes may be unmanaged
 We have some instructions for building managed clusters in KodeKloud playgrounds below. **NOTE** If you are deploying a cluster as part of a lab exercise in one of the other courses, then wherever this guide tells you to run commands in a CloudShell terminal you must instead run those commands in the lab's terminal.
 
 * AWS EKS
-    * [Manual build using the console](./eks/console/README.md)
-    * [Automated build using Terraform](https://github.com/kodekloudhub/amazon-elastic-kubernetes-service-course/blob/main/docs/playground.md)
+  * [Manual build using the console](./eks/console/README.md)
+  * [Automated build using Terraform](https://github.com/kodekloudhub/amazon-elastic-kubernetes-service-course/blob/main/docs/playground.md)
 * Azure AKS
-    * [Manual build using the console](./aks/console/README.md)
-    * [Automated build using Terraform](./aks/terraform/README.md) - From Azure CloudShell. Nothing to install on your laptop
-    * [Automated build using Terraform](./aks/terraform_local/README.md) - From your laptop. Requires you to install terraform, git, kubectl, azure client.
+  * [Manual build using the console](./aks/console/README.md)
+  * [Automated build using Terraform](./aks/terraform/README.md) - From Azure CloudShell. Nothing to install on your laptop
+  * [Automated build using Terraform](./aks/terraform_local/README.md) - From your laptop. Requires you to install terraform, git, kubectl, azure client.
 * Google GKE
-    * [Manual build using the console](./gke/console/README.md)
-    * [Automated build using Terraform](./gke/terraform/README.md)
-
+  * [Manual build using the console](./gke/console/README.md)
+  * [Automated build using Terraform](./gke/terraform/README.md)

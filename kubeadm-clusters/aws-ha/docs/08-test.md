@@ -2,7 +2,7 @@
 
 Run the following on `student-node`
 
-1.  Ensure all calico pods are running. They can take a while to initialise
+1. Ensure all calico pods are running. They can take a while to initialise
 
     ```bash
     watch kubectl get pods -n calico-system
@@ -29,7 +29,7 @@ Run the following on `student-node`
 
 [//]: # (command:kubectl wait deployment -n default nginx --for condition=Available=True --timeout=90s)
 
-2.  Hit the new service
+2. Hit the new service
 
     ```bash
     curl http://node01:$PORT_NUMBER
@@ -48,5 +48,5 @@ Congratulations! You now have a working HA kubeadm cluster.
     ```
     http://54.167.161.210:32182
     ```
-1. Paste URL to your browser
 
+1. Paste URL to your browser

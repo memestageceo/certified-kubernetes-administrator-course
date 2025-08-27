@@ -1,13 +1,15 @@
 # Practice Test - Image Security
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-image-security/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-image-security/)
 
 Solutions to the practice test - Image Security
+
 - We have an application running on our cluster. Let us explore it first. What image is the application using?
 
   <details>
   
   ```
-  $ kubectl get deploy -o wide
+  kubectl get deploy -o wide
   ```
   
   </details>
@@ -17,7 +19,7 @@ Solutions to the practice test - Image Security
   <details>
   
   ```
-  $ kubectl edit deployment web
+  kubectl edit deployment web
   ```
   
   </details>
@@ -27,17 +29,17 @@ Solutions to the practice test - Image Security
   <details>
   
   ```
-  $ kubectl get pods
+  kubectl get pods
   ```
   
   </details>
   
-- Run command kubectl create secret docker-registry private-reg-cred --docker-username=dock_user --docker-password=dock_password --docker-server=myprivateregistry.com:5000 --docker-email=dock_user@myprivateregistry.com
+- Run command kubectl create secret docker-registry private-reg-cred --docker-username=dock_user --docker-password=dock_password --docker-server=myprivateregistry.com:5000 --docker-email=<dock_user@myprivateregistry.com>
   
   <details>
   
   ```
-  $ kubectl create secret docker-registry private-reg-cred --docker-username=dock_user --docker-password=dock_password --docker-server=myprivateregistry.com:5000 --docker-email=dock_user@myprivateregistry.com
+  kubectl create secret docker-registry private-reg-cred --docker-username=dock_user --docker-password=dock_password --docker-server=myprivateregistry.com:5000 --docker-email=dock_user@myprivateregistry.com
   ```
   
   </details>
@@ -47,7 +49,7 @@ Solutions to the practice test - Image Security
   <details>
   
   ```
-  $ kubectl edit deploy web
+  kubectl edit deploy web
   ```
   
   </details>
@@ -57,6 +59,7 @@ Solutions to the practice test - Image Security
   <details>
   
   ```
-  $ kubectl get pods
+  kubectl get pods
   ```
+
   </details>

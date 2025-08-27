@@ -1,6 +1,6 @@
 # Pre-requisite Switching Routing Gateways
 
-  - Take me to [Lecture](https://kodekloud.com/topic/pre-requisite-switching-routing-gateways-cni-in-kubernetes/)
+- Take me to [Lecture](https://kodekloud.com/topic/pre-requisite-switching-routing-gateways-cni-in-kubernetes/)
 
 In this section, we will take a look at **Switching, Routing and Gateways**
 
@@ -9,12 +9,13 @@ In this section, we will take a look at **Switching, Routing and Gateways**
 - To see the interface on the host system
 
 ```
-$ ip link
+ip link
 ```
+
 - To see the IP Address interfaces.
 
 ```
-$ ip addr
+ip addr
 ```
 
 ![net-14](../../images/net14.PNG)
@@ -24,8 +25,9 @@ $ ip addr
 - To see the existing routing table on the host system.
 
 ```
-$ route
+route
 ```
+
 ```
 $ ip route show
 or
@@ -35,7 +37,7 @@ $ ip route list
 - To add entries into the routing table.
 
 ```
-$ ip route add 192.168.1.0/24 via 192.168.2.1
+ip route add 192.168.1.0/24 via 192.168.2.1
 ```
 
 ![net-15](../../images/net15.PNG)
@@ -43,11 +45,13 @@ $ ip route add 192.168.1.0/24 via 192.168.2.1
 ## Gateways
 
 - To add a default route.
+
 ```
-$ ip route add default via 192.168.2.1
+ip route add default via 192.168.2.1
 ```
 
 - To check the IP forwarding is enabled on the host.
+
 ```
 $ cat /proc/sys/net/ipv4/ip_forward
 0
@@ -56,6 +60,7 @@ $ echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
 - Enable packet forwarding for IPv4.
+
 ```
 $ cat /etc/sysctl.conf
 
@@ -64,16 +69,13 @@ net.ipv4.ip_forward=1
 ```
 
 - To view the sysctl variables.
+
 ```
-$ sysctl -a 
+sysctl -a 
 ```
 
 - To reload the sysctl configuration.
+
 ```
-$ sysctl --system
+sysctl --system
 ```
-
-
-
-
-

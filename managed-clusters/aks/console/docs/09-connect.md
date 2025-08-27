@@ -38,5 +38,3 @@ NAME    READY   STATUS    RESTARTS   AGE
 nginx   1/1     Running   0          8s
 odl_user [ ~ ]$ 
 ```
-
-

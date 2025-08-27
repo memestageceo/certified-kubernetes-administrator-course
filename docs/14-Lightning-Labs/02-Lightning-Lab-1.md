@@ -1,26 +1,25 @@
 # Lightning Lab 1
 
-  - I am ready! [Take me to Lightning Lab 1](https://kodekloud.com/topic/lightning-lab-1-2/)
+- I am ready! [Take me to Lightning Lab 1](https://kodekloud.com/topic/lightning-lab-1-2/)
 
 ## Solution to LL-1
 
-1.  <details>
+1. <details>
     <summary>Upgrade the current version of kubernetes from 1.28.0 to 1.29.0 exactly using the kubeadm utility.</summary>
 
     Make sure that the upgrade is carried out one node at a time starting with the controlplane node. To minimize downtime, the deployment `gold-nginx` should be rescheduled on an alternate node before upgrading each node.
-
 
     Upgrade `controlplane` node first and drain node `node01` before upgrading it. Pods for `gold-nginx` should run on the controlplane node subsequently.
 
     **Upgrade `controlplane`**
 
-    1.  Update package repo
+    1. Update package repo
 
         ```bash
         apt update
         ```
 
-    1.  Check madison to see what kubernetes packages are available
+    1. Check madison to see what kubernetes packages are available
 
         ```bash
         apt-cache madison kubeadm
@@ -28,7 +27,7 @@
 
         Note that only 1.28 versions are present, meaning you have to grab the 1.29 repos
 
-    1.  Grab kubernetes 1.29 repos
+    1. Grab kubernetes 1.29 repos
 
         For this, we need to edit the apt source file which you should find is `/etc/apt/sources.list.d/kubernetes.list`
 
@@ -38,7 +37,7 @@
 
         FInd any occurrence of `1.28` in this file and change it to `1.29`, then save and exit from vi.
 
-    1.  Now run madison again to find out the package version for 1.29
+    1. Now run madison again to find out the package version for 1.29
 
         ```bash
         apt-cache madison kubeadm
@@ -168,10 +167,9 @@
 
     While `kubeadm upgrade apply` is running on `controlplane`, which takes some minutes, open a second terminal and perform steps `ii`, `iii` and `iv` of "Upgrade `node01`", so that it is ready for `kubeadm upgrade node` as soon as you have drained it.
 
-
     </details>
 
-2.  <details>
+2. <details>
     <summary>Print the names of all deployments in the admin2406 namespace in the following format...</summary>
 
     This is a job for `custom-columns` output of kubectl
@@ -179,9 +177,10 @@
     ```
     kubectl -n admin2406 get deployment -o custom-columns=DEPLOYMENT:.metadata.name,CONTAINER_IMAGE:.spec.template.spec.containers[].image,READY_REPLICAS:.status.readyReplicas,NAMESPACE:.metadata.namespace --sort-by=.metadata.name > /opt/admin2406_data
     ```
+
     </details>
 
-3.  <details>
+3. <details>
     <summary>A kubeconfig file called admin.kubeconfig has been created in /root/CKA. There is something wrong with the configuration. Troubleshoot and fix it.</summary>
 
     First, let's test this kubeconfig
@@ -209,9 +208,10 @@
     ```
     kubectl get pods --kubeconfig /root/CKA/admin.kubeconfig
     ```
+
   </details>
 
-4.  <details>
+4. <details>
     <summary>Create a new deployment called nginx-deploy, with image nginx:1.16 and 1 replica. Next upgrade the deployment to version 1.17 using rolling update.</summary>
 
     ```
@@ -223,7 +223,7 @@
 
     </details>
 
-5.  <details>
+5. <details>
     <summary>A new deployment called alpha-mysql has been deployed in the alpha namespace. However, the pods are not running. Troubleshoot and fix the issue.</summary>
 
     The deployment should make use of the persistent volume alpha-pv to be mounted at /var/lib/mysql and should use the environment variable MYSQL_ALLOW_EMPTY_PASSWORD=1 to make use of an empty root password.
@@ -265,9 +265,10 @@
           storage: 1Gi
       storageClassName: slow
     ```
+
   </details>
 
-6.  <details>
+6. <details>
     <summary>Take the backup of ETCD at the location /opt/etcd-backup.db on the controlplane node.</summary>
 
     This question is a bit poorly worded. It requires us to make a backup of etcd and store the backup at the given location.
@@ -285,7 +286,7 @@
     Whilst we _could_ also use the argument `--endpoints=127.0.0.1:2379`, it is not necessary here as we are on the controlplane node, same as `etcd` itself. The default endpoint is the local host.
     </details>
 
-7.  <details>
+7. <details>
     <summary>Create a pod called secret-1401 in the admin1401 namespace using the busybox image....</summary>
 
     The container within the pod should be called `secret-admin` and should sleep for 4800 seconds.
@@ -339,5 +340,3 @@
         ```
 
   </details>
-
-

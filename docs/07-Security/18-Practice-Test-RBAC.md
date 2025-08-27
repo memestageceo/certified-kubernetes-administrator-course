@@ -1,13 +1,15 @@
 # Practice Test - RBAC
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-role-based-access-controls/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-role-based-access-controls/)
 
 Solutions to practice test - RBAC
+
 - Run the command kubectl describe pod kube-apiserver-controlplane -n kube-system and look for --authorization-mode
   
   <details>
   
   ```
-  $ kubectl describe pod kube-apiserver-controlplane -n kube-system
+  kubectl describe pod kube-apiserver-controlplane -n kube-system
   ```
   
   </details>
@@ -17,7 +19,7 @@ Solutions to practice test - RBAC
   <details>
   
   ```
-  $ kubectl get roles
+  kubectl get roles
   ```
   
   </details>
@@ -27,7 +29,7 @@ Solutions to practice test - RBAC
   <details>
   
   ```
-  $ kubectl get roles --all-namespaces
+  kubectl get roles --all-namespaces
   ```
   
   </details>
@@ -37,7 +39,7 @@ Solutions to practice test - RBAC
   <details>
   
   ```
-  $ kubectl describe role kube-proxy -n kube-system
+  kubectl describe role kube-proxy -n kube-system
   ```
   
   </details>
@@ -79,7 +81,7 @@ Solutions to practice test - RBAC
   <details>
   
   ```
-  $ kubectl create -f /var/answers/developer-role.yaml
+  kubectl create -f /var/answers/developer-role.yaml
   ```
   
   </details>
@@ -89,9 +91,9 @@ Solutions to practice test - RBAC
   <details>
   
   ```
-  $ kubectl get roles,rolebindings -n blue
-  $ kubectl describe role developer -n blue
-  $ kubectl edit role developer -n blue (update the resourceNames)
+  kubectl get roles,rolebindings -n blue
+  kubectl describe role developer -n blue
+  kubectl edit role developer -n blue (update the resourceNames)
   ```
   
   </details>
@@ -101,7 +103,7 @@ Solutions to practice test - RBAC
   <details>
   
   ```
-  $ kubectl create -f /var/answers/dev-user-deploy.yaml
+  kubectl create -f /var/answers/dev-user-deploy.yaml
   ```
   
   </details>

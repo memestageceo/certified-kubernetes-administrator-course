@@ -1,6 +1,6 @@
 # CNI weave
   
-  - Take me to [Lecture](https://kodekloud.com/topic/cni-weave/)
+- Take me to [Lecture](https://kodekloud.com/topic/cni-weave/)
 
 In this section, we will take a look at "CNI Weave in the Kubernetes Cluster"
 
@@ -39,7 +39,7 @@ weave-net-tb9tz                           2/2     Running            0          
 ## View the logs of Weave Pod's
 
 ```
-$ kubectl logs weave-net-tb9tz weave -n kube-system 
+kubectl logs weave-net-tb9tz weave -n kube-system 
 ```
 
 ## View the default route in the Pod
@@ -52,8 +52,7 @@ $ kubectl exec test -- ip route
 default via 10.244.1.1 dev eth0
 ```
 
-
 #### References Docs
 
-- https://kubernetes.io/docs/concepts/cluster-administration/addons/
-- https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
+- <https://kubernetes.io/docs/concepts/cluster-administration/addons/>
+- <https://www.weave.works/docs/net/latest/kubernetes/kube-addon/>

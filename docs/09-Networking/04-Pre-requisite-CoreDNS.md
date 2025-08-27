@@ -1,6 +1,6 @@
 # Pre-requisite CoreDNS
 
-  - Take me to [Lecture](https://kodekloud.com/topic/prerequisite-coredns/)
+- Take me to [Lecture](https://kodekloud.com/topic/prerequisite-coredns/)
 
 In this section, we will take a look at **CoreDNS**
 
@@ -24,7 +24,7 @@ coredns
 - Run the executable file to start a DNS server. By default, it's listen on port 53, which is the default port for a DNS server.
 
 ```
-$ ./coredns
+./coredns
 
 ```
 
@@ -48,7 +48,7 @@ $ cat > /etc/hosts
 ```
 $ cat > Corefile
 . {
-	hosts   /etc/hosts
+ hosts   /etc/hosts
 }
 
 ```
@@ -56,13 +56,12 @@ $ cat > Corefile
 ## Run the executable file
 
 ```
-$ ./coredns
+./coredns
 
 ```
 
-
 #### References Docs
 
-- https://github.com/kubernetes/dns/blob/master/docs/specification.md
-- https://coredns.io/plugins/kubernetes/
-- https://github.com/coredns/coredns/releases
+- <https://github.com/kubernetes/dns/blob/master/docs/specification.md>
+- <https://coredns.io/plugins/kubernetes/>
+- <https://github.com/coredns/coredns/releases>

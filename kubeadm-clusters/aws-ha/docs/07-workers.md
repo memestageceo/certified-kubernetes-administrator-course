@@ -1,7 +1,7 @@
 # Join the worker nodes
 
-1.  SSH to `node01`
-1.  Become root
+1. SSH to `node01`
+1. Become root
 
     ```bash
     sudo -i
@@ -28,4 +28,3 @@
 
 Next: [Test](./08-test.md)</br>
 Prev: [Control Plane Setup](./06-controlplane.md)
-

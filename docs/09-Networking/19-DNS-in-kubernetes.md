@@ -1,6 +1,6 @@
 # DNS in Kubernetes
 
-  - Take me to [Lecture](https://kodekloud.com/topic/dns-in-kubernetes/)
+- Take me to [Lecture](https://kodekloud.com/topic/dns-in-kubernetes/)
 
 In this section, we will take a look at **DNS in the Kubernetes Cluster**
 
@@ -11,7 +11,9 @@ In this section, we will take a look at **DNS in the Kubernetes Cluster**
 ```
 <POD-IP-ADDRESS>.<namespace-name>.pod.cluster.local
 ```
+
 > Example
+
 ```
 # Pod is located in a default namespace
 
@@ -53,12 +55,15 @@ Server: nginx/1.19.2
 ```
 <service-name>.<namespace-name>.svc.cluster.local
 ```
+
 > Example
+
 ```
 # Service is located in a default namespace
 
 web-service.default.svc.cluster.local
 ```
+
 - Pod, Service is located in the `apps` namespace
 
 ```
@@ -87,9 +92,7 @@ Server: nginx/1.19.2
 
 ```
 
-
-
 #### References Docs
 
-- https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
-- https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/
+- <https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/>
+- <https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/>

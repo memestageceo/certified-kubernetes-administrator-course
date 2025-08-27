@@ -1,7 +1,9 @@
 # Practice Test - OS Upgrades
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-os-upgrades/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-os-upgrades/)
   
 Solutions to practice test - OS Upgrades
+
 - Let us explore the environment first. How many nodes do you see in the cluster?
   
   <details>
@@ -98,7 +100,7 @@ Solutions to practice test - OS Upgrades
   $ kubectl get pods -o wide
   ```
   </details>
-    
+
 - What would happen to hr-app if node02 is drained forcefully?
   
   <details>
@@ -107,7 +109,7 @@ Solutions to practice test - OS Upgrades
   hr-app will be lost forever
   ```
   </details>
-    
+
 - Run the command kubectl drain node02 --ignore-daemonsets --force
 
   <details>
@@ -123,4 +125,3 @@ Solutions to practice test - OS Upgrades
   $ kubectl cordon node03
   ```
   </details>
-

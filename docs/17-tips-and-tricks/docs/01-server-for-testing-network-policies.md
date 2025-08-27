@@ -52,6 +52,7 @@ The following simulates a pod found in one of the Killer.sh network policy quest
           { echo -ne "HTTP/1.0 200 OK\r\nContent-Length: $(wc -c <index.htm)\r\n\r\n"; cat index.htm; } | nc -l -p $port
       done
     ```
+
 1. Create a pod that mounts the configmap and runs the script it contains
 
     ```yaml
@@ -74,6 +75,7 @@ The following simulates a pod found in one of the Killer.sh network policy quest
         name: db1-configmap
         defaultMode: 0755
     ```
+
 1. Get the pod's IP address. Using the IP for curl test is quicker than typing out the DNS name.
 
     ```
@@ -88,8 +90,6 @@ The following simulates a pod found in one of the Killer.sh network policy quest
     curl 192.168.1.12:1111
     ```
 
-
 ## See also
 
 See also [client for testing](./02-client--for-testing-network-things.md)
-

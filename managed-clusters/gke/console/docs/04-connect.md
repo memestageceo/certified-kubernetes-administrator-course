@@ -9,5 +9,3 @@
     ```text
     kubectl get pods -A
     ```
-
-

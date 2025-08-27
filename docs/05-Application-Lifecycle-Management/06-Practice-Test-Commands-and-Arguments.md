@@ -1,14 +1,17 @@
 # Practice Test - Commands and Arguments
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-commands-and-arguments/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-commands-and-arguments/)
   
 Solutions to practice test - commands and arguments
+
 - Run the command 'kubectl get pods' and count the number of pods.
   
   <details>
   
   ```
-  $ kubectl get pods
+  kubectl get pods
   ```
+
   </details>
   
 - Run the command 'kubectl describe pod' and look for command option
@@ -16,8 +19,9 @@ Solutions to practice test - commands and arguments
   <details>
   
   ```
-  $ kubectl describe pod
+  kubectl describe pod
   ```
+
   </details>
   
 - Set the command option to ['sleep', '5000']. Answer file at: /var/answers/answer-ubuntu-sleeper-2.yaml
@@ -33,6 +37,7 @@ Solutions to practice test - commands and arguments
   ```
   python app.py
   ```
+
   </details>
   
 - Inspect the file 'Dockerfile2' given at /root/webapp-color. What command is run at container startup?
@@ -52,8 +57,7 @@ Solutions to practice test - commands and arguments
   ```
   python app.py --color pink
   ```
+
   </details>
   
 - Answer file located at /var/answers/answer-webapp-color-green.yaml
-
-

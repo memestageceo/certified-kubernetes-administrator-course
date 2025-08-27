@@ -18,7 +18,7 @@ Do the following on `controlplane`
 
 [//]: # (command:kubectl wait deployment -n default nginx --for condition=Available=True --timeout=90s)
 
-2.  Hit the new service
+2. Hit the new service
 
     ```bash
     curl http://node01:$PORT_NUMBER
@@ -26,9 +26,11 @@ Do the following on `controlplane`
     ```
 
     If you get this error:
+
     ```
     curl: (7) Failed to connect to node01 port 30659 after 0 ms: Connection refused
     ```
+
     Wait a few seconds and try again. Both should return the nginx welcome message as HTML text.
 
 Congratulations! You now have a working kubeadm cluster.
@@ -53,6 +55,7 @@ echo "http://$(dig +short node01):$PORT_NUMBER"
     ```
     http://54.167.161.210:32182
     ```
+
 1. Paste URL to your browser
 
 You may also copy the KUBECONFIG to `student-node` thus allowing you to run `kubectl` commands from there:
@@ -66,7 +69,4 @@ You may also copy the KUBECONFIG to `student-node` thus allowing you to run `kub
     kubectl get pods -n kube-system
     ```
 
-
 Prev: [Worker nodes](./06-workers.md)
-
-

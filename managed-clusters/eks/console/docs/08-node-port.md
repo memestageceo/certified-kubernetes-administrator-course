@@ -18,7 +18,7 @@ In order for you to be able to see any NodePort services you create, we must edi
 1. Fill in the new security group rule
     * `Type`: `Custom TCP`
     * `Port range`: `30000 - 32768` which is the default range for node ports as you should know from the course.
-    * `Source`: `My IP` It will automatically determine your broadband public IP. You can find this yourself by browsing http://checkip.amazonaws.com
+    * `Source`: `My IP` It will automatically determine your broadband public IP. You can find this yourself by browsing <http://checkip.amazonaws.com>
 
     ![](../images/08-rules.png)
 
@@ -62,4 +62,3 @@ In order for you to be able to see any NodePort services you create, we must edi
 1. Now you can view your service in your browser by building the URL from the public IP address you got from the EC2 console, and the node port `30080`. In this example it is `http://44.198.158.250:30080`, but for you the IP address will be different. Paste the URL you have formed into your browser. You should see the nginx welcome page.
 
 Prev: [Join Nodes](./07-join-nodes.md)
-

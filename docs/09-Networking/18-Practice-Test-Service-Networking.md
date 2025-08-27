@@ -1,8 +1,8 @@
 # Practice Test Service Networking
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-service-networking/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-service-networking/)
 
-#### Solution 
+#### Solution
 
 1. <details>
    <summary>What network range are the nodes in the cluster part of?</summary>
@@ -16,6 +16,7 @@
    ```
    192.20.116.0/24
    ```
+
    </details>
 
 2. <details>
@@ -30,6 +31,7 @@
    ```
    10.244.0.0/16
    ```
+
    </details>
 
 3. <details>
@@ -44,6 +46,7 @@
    ```
    10.96.0.0/12
    ```
+
    </details>
 
 4. <details>
@@ -72,6 +75,7 @@
    ```
    k logs -n kube-system kube-proxy-rtr8p
    ```
+
    </details>
 
 6. <details>
@@ -83,4 +87,3 @@
 
    From this, you can see that `kube-proxy` is a `daemonset`
    </details>
-

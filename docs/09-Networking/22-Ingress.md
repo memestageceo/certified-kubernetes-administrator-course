@@ -1,6 +1,6 @@
 # Ingress
 
-  - Take me to [Lecture](https://kodekloud.com/topic/ingress/)
+- Take me to [Lecture](https://kodekloud.com/topic/ingress/)
 
 In this section, we will take a look at **Ingress**
 
@@ -65,6 +65,7 @@ spec:
 - ServiceAccount require for authentication purposes along with correct Roles, ClusterRoles and RoleBindings.
 
 - Create a ingress service account
+
 ```
 $ kubectl create -f ingress-sa.yaml
 serviceaccount/ingress-serviceaccount created
@@ -95,13 +96,15 @@ spec:
 ```
 
 - Create a service
+
 ```
-$ kubectl create -f service-Nodeport.yaml
+kubectl create -f service-Nodeport.yaml
 ```
+
 - To get the service
 
 ```
-$ kubectl get service
+kubectl get service
 ```
 
 ## Ingress Resources
@@ -120,12 +123,14 @@ spec:
 ```
 
 - To create the ingress resource
+
 ```
 $ kubectl create -f Ingress-wear.yaml
 ingress.extensions/ingress-wear created
 ```
 
 - To get the ingress
+
 ```
 $ kubectl get ingress
 NAME           CLASS    HOSTS   ADDRESS   PORTS   AGE
@@ -154,6 +159,7 @@ spec:
           serviceName: watch-service
           servicePort: 80
 ```
+
 - Describe the earlier created ingress resource
 
 ```
@@ -177,6 +183,7 @@ Events:
 ```
 
 - 2 Rules and 1 Path each.
+
 ```
 # Ingress-wear-watch.yaml
 
@@ -200,13 +207,8 @@ spec:
           servicePort: 80
 ```
 
-
-
-
-
-
 #### References Docs
 
-- https://kubernetes.io/docs/concepts/services-networking/ingress/
-- https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
-- https://thenewstack.io/kubernetes-ingress-for-beginners/
+- <https://kubernetes.io/docs/concepts/services-networking/ingress/>
+- <https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/>
+- <https://thenewstack.io/kubernetes-ingress-for-beginners/>

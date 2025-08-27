@@ -1,7 +1,9 @@
 # ReplicaSets
-  - Take me to [Video Tutorial](https://kodekloud.com/topic/replicasets/)
+
+- Take me to [Video Tutorial](https://kodekloud.com/topic/replicasets/)
 
 In this section, we will take a look at the below
+
 - Replication Controller
 - ReplicaSet
 
@@ -14,6 +16,7 @@ In this section, we will take a look at the below
   ![rc1](../../images/rc1.PNG)
   
 ## Difference between ReplicaSet and Replication Controller
+
 - **`Replication Controller`** is the older technology that is being replaced by a **`ReplicaSet`**.
 - **`ReplicaSet`** is the new way to setup replication.
 
@@ -44,20 +47,27 @@ In this section, we will take a look at the below
            image: nginx
      replicas: 3
 ```
-  - To Create the replication controller
+
+- To Create the replication controller
+
     ```
-    $ kubectl create -f rc-definition.yaml
+    kubectl create -f rc-definition.yaml
     ```
-  - To list all the replication controllers
+
+- To list all the replication controllers
+
     ```
-    $ kubectl get replicationcontroller
+    kubectl get replicationcontroller
     ```
-  - To list pods that are launch by the replication controller
+
+- To list pods that are launch by the replication controller
+
     ```
-    $ kubectl get pods
+    kubectl get pods
     ```
+
     ![rc3](../../images/rc3.PNG)
-    
+
 ## Creating a ReplicaSet
   
 ## ReplicaSet Definition File
@@ -88,31 +98,40 @@ In this section, we will take a look at the below
        matchLabels:
         type: front-end
  ```
-#### ReplicaSet requires a selector definition when compare to Replication Controller.
-   
-  - To Create the replicaset
+
+#### ReplicaSet requires a selector definition when compare to Replication Controller
+
+- To Create the replicaset
+
     ```
-    $ kubectl create -f replicaset-definition.yaml
+    kubectl create -f replicaset-definition.yaml
     ```
-  - To list all the replicaset
+
+- To list all the replicaset
+
     ```
-    $ kubectl get replicaset
+    kubectl get replicaset
     ```
-  - To list pods that are launch by the replicaset
+
+- To list pods that are launch by the replicaset
+
     ```
-    $ kubectl get pods
+    kubectl get pods
     ```
-   
+
     ![rs1](../../images/rs1.PNG)
-    
+
 ## Labels and Selectors
+
 #### What is the deal with Labels and Selectors? Why do we label pods and objects in kubernetes?
 
   ![labels](../../images/labels.PNG)
   
 ## How to scale replicaset
+
 - There are multiple ways to scale replicaset
-  - First way is to update the number of replicas in the replicaset-definition.yaml definition file. E.g replicas: 6 and then run 
+  - First way is to update the number of replicas in the replicaset-definition.yaml definition file. E.g replicas: 6 and then run
+
  ```
     apiVersion: apps/v1
     kind: ReplicaSet
@@ -139,18 +158,24 @@ In this section, we will take a look at the below
 ```
 
   ```
-  $ kubectl apply -f replicaset-definition.yaml
+  kubectl apply -f replicaset-definition.yaml
   ```
-  - Second way is to use **`kubectl scale`** command.
+
+- Second way is to use **`kubectl scale`** command.
+
   ```
-  $ kubectl scale --replicas=6 -f replicaset-definition.yaml
+  kubectl scale --replicas=6 -f replicaset-definition.yaml
   ```
-  - Third way is to use **`kubectl scale`** command with type and name
+
+- Third way is to use **`kubectl scale`** command with type and name
+
   ```
-  $ kubectl scale --replicas=6 replicaset myapp-replicaset
+  kubectl scale --replicas=6 replicaset myapp-replicaset
   ```
+
   ![rs2](../../images/rs2.PNG)
 
-#### K8s Reference Docs:
-- https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
-- https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/
+#### K8s Reference Docs
+
+- <https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/>
+- <https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/>

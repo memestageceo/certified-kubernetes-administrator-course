@@ -1,6 +1,6 @@
 # Container Storage Interface
 
-  - Take me to [Lecture](https://kodekloud.com/topic/container-storage-interface/)
+- Take me to [Lecture](https://kodekloud.com/topic/container-storage-interface/)
 
 In this section, we will take a look at **Container Storage Interface**
 
@@ -11,14 +11,11 @@ In this section, we will take a look at **Container Storage Interface**
 
 ![class-11](../../images/class11.PNG)
 
-
 ## Container Networking Interface
 
 - To support different networking solutions, the container networking interface was introduced. Any new networking vendors could simply develop their plugin based on the CNI standards and make their solution work with Kubernetes.
 
 ![class-12](../../images/class12.PNG)
-
-
 
 ## Container Storage Interface
 
@@ -28,11 +25,9 @@ In this section, we will take a look at **Container Storage Interface**
 
 ![class-13](../../images/class13.PNG)
 
+#### Container Storage Interface
 
-
-#### Container Storage Interface 
-
-- https://github.com/container-storage-interface/spec
-- https://kubernetes-csi.github.io/docs/
-- http://mesos.apache.org/documentation/latest/csi/
-- https://www.nomadproject.io/docs/internals/plugins/csi#volume-lifecycle
+- <https://github.com/container-storage-interface/spec>
+- <https://kubernetes-csi.github.io/docs/>
+- <http://mesos.apache.org/documentation/latest/csi/>
+- <https://www.nomadproject.io/docs/internals/plugins/csi#volume-lifecycle>

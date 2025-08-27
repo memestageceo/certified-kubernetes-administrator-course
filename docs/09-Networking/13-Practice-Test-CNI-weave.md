@@ -1,6 +1,6 @@
 # Practice Test - CNI weave
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cni-weave/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cni-weave/)
 
 #### Solution
 
@@ -74,4 +74,3 @@
 
       [This is a great article](https://tonylixu.medium.com/k8s-network-cni-introduction-b035d42ad68f) on what the programs in `/opt/cni/bin` are for.
      </details>
-

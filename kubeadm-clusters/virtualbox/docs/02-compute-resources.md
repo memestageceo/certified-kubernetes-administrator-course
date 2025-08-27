@@ -22,7 +22,6 @@ Run Vagrant up to create the virtual machines.
 vagrant up
 ```
 
-
 ## Bridge interface selection
 
 Bridged networking makes the VMs appear as hosts directly on your local network. This means that you will be able to use your own browser to connect to any NodePort services you create in the cluster.
@@ -37,6 +36,7 @@ Which of the two choices do you think is correct?
 > `Intel(R) Ethernet Connection (2) I219-V`
 
 Why? Because
+
 1. Ethernet is the term often given to wired network connections.
 2. The other one is Hyper-V which is internal and used for native running of VMs (could indeed be used instead of VirtualBox, but that's another story).
 
@@ -57,9 +57,11 @@ At the end of the deployment, it will tell you how to access NodePort services f
 If you encountered issues starting the VMs, you can try NAT mode. Note that in NAT mode you will not be able to connect to your NodePort services using your browser without setting up port forwarding rules in VirtualBox UI.
 
 1. Run
+
     ```
     vagrant destroy -f
     ```
+
 1. Edit `vagrantfile` and change `BUILD_MODE = "BRIDGE"` to `BUILD_MODE = "NAT"` at line 10.
 
 ## SSH to the nodes
@@ -83,7 +85,6 @@ Vagrant generates a private key for each of these VMs. It is placed under the .v
 
 **Username/Password:** `vagrant/vagrant`
 
-
 ## Verify Environment
 
 - Ensure all VMs are up
@@ -106,7 +107,6 @@ Then re-provision. Only the missing VMs will be re-provisioned
 ```bash
 vagrant up
 ```
-
 
 Sometimes the delete does not delete the folder created for the VM and throws an error similar to this:
 

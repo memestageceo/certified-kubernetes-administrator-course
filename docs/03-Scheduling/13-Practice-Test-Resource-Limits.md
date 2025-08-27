@@ -1,14 +1,17 @@
 # Practice Test - Resource Limits
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-resource-limits/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-resource-limits/)
   
 Solutions to practice test - resource limtis
+
 - Run the command 'kubectl describe pod rabbit' and inspect requests.
   
   <details>
 
   ```
-  $ kubectl describe pod rabbit
+  kubectl describe pod rabbit
   ```
+
   </details>
 
 - Run the command 'kubectl delete pod rabbit'.
@@ -16,8 +19,9 @@ Solutions to practice test - resource limtis
   <details>
 
   ```
-  $ kubectl delete pod rabbit
+  kubectl delete pod rabbit
   ```
+
   </details>
 
 - Run the command 'kubectl get pods' and inspect the status of the pod elephant
@@ -25,8 +29,9 @@ Solutions to practice test - resource limtis
   <details>
 
   ```
-  $ kubectl get pods
+  kubectl get pods
   ```
+
   </details>
 
 - The status 'OOMKilled' indicates that the pod ran out of memory. Identify the memory limit set on the POD.
@@ -36,8 +41,9 @@ Solutions to practice test - resource limtis
   <details>
 
   ```
-  $ kubectl get pods elephant -o yaml > elephant.yaml
+  kubectl get pods elephant -o yaml > elephant.yaml
   ```
+
   </details>
 
   Update the elephant.yaml pod definition with the resource memory limits to 20Mi
@@ -50,6 +56,7 @@ Solutions to practice test - resource limtis
         memory: 20Mi
   ---
   ```
+
   </details>
 
   Delete the pod and recreate it.
@@ -57,9 +64,10 @@ Solutions to practice test - resource limtis
   <details>
 
   ```
-  $ kubectl delete pod elephant
-  $ kubectl create -f elephant.yaml
+  kubectl delete pod elephant
+  kubectl create -f elephant.yaml
   ```
+
   </details>
 
 - Inspect the status of POD. Make sure it's running
@@ -67,8 +75,9 @@ Solutions to practice test - resource limtis
   <details>
 
   ```
-  $ kubectl get pods
+  kubectl get pods
   ```
+
   </details>
 
 - Run the command 'kubectl delete pod elephant'.
@@ -76,9 +85,7 @@ Solutions to practice test - resource limtis
   <details>
 
   ```
-  $ kubectl delete pod elephant
+  kubectl delete pod elephant
   ```
+
   </details>
-
-
-

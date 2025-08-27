@@ -1,6 +1,6 @@
 # Practice Test - Storage Class
   
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-storage-class-2/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-storage-class-2/)
 
 #### Solution
 
@@ -11,7 +11,7 @@
       ```
       0
       ```
-    
+
      </details>
 
   2. Check the Solution
@@ -21,8 +21,9 @@
       ```
       2
       ```
+
      </details>
- 
+
   3. Check the Solution
 
      <details>
@@ -30,15 +31,17 @@
       ```
       local-storage
       ```
+
      </details>
 
   4. Check the Solution
-    
+
      <details>
 
       ```
       WaitForFirstConsumer
       ```
+
       </details>
 
   5. Check the Solution
@@ -58,6 +61,7 @@
       ```
       NO
       ```
+
      </details>
 
   7. Check the Solution
@@ -77,6 +81,7 @@
             storage: 500Mi
         storageClassName: local-storage
       ```
+
      </details>
 
   8. Check the Solution
@@ -86,6 +91,7 @@
       ```
       Pending
       ```
+
      </details>
 
   9. Check the Solution
@@ -95,21 +101,23 @@
       ```
       A Pod consuming the volume in not scheduled
       ```
+
      </details>
 
   10. Check the Solution
 
       <details>
- 
+
        ```
        The Storage Class called local-storage makes use of VolumeBindingMode set to WaitForFirstConsumer. This will delay the binding and provisioning of a PersistentVolume until a Pod using the PersistentVolumeClaim is created.
        ```
+
       </details>
 
   11. Check the Solution
 
       <details>
- 
+
        ```
        apiVersion: v1
        kind: Pod
@@ -129,12 +137,13 @@
              persistentVolumeClaim:
                claimName: local-pvc
        ```
+
       </details>
 
   12. Check the Solution
 
       <details>
- 
+
        ```
        apiVersion: storage.k8s.io/v1
        kind: StorageClass
@@ -143,6 +152,5 @@
        provisioner: kubernetes.io/no-provisioner
        volumeBindingMode: WaitForFirstConsumer
        ```
+
       </details>
-
-

@@ -1,9 +1,8 @@
 # CoreDNS in Kubernetes
 
-  - Take me to [Lecture](https://kodekloud.com/topic/coredns-in-kubernetes/)
+- Take me to [Lecture](https://kodekloud.com/topic/coredns-in-kubernetes/)
 
 In this section, we will take a look at **CoreDNS in the Kubernetes**
-
 
 ## To view the Pod
 
@@ -55,7 +54,7 @@ Corefile:
 }
 ```
 
-## To view the Service 
+## To view the Service
 
 ```
 $ kubectl get service -n kube-system
@@ -63,7 +62,7 @@ NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                  AGE
 kube-dns   ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP,9153/TCP   62m
 ```
 
-## To view Configuration into the kubelet 
+## To view Configuration into the kubelet
 
 ```
 $ cat /var/lib/kubelet/config.yaml | grep -A2  clusterDNS
@@ -101,7 +100,7 @@ options ndots:5
 pod "test-pod" deleted
 ```
 
-## Resolve the Pod 
+## Resolve the Pod
 
 ```
 $ kubectl get pods -o wide
@@ -134,8 +133,7 @@ Address 1: 10.106.112.101 web-service.default.svc.cluster.local
 
 ```
 
-
 #### References Docs
 
-- https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services
-- https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pods
+- <https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services>
+- <https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pods>

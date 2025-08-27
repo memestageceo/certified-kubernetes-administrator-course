@@ -1,7 +1,6 @@
 # Mock Exam 3 Solution
 
-
-1. Run the below command for solution: 
+1. Run the below command for solution:
 
      <details>
 
@@ -26,21 +25,23 @@
          resources: {}
        serviceAccountName: pvviewer
      ```
+
      </details>
 
-2. Run the below command for solution: 
+2. Run the below command for solution:
 
      <details>
- 
+
      ```
      kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="InternalIP")].address}' > /root/CKA/node_ips
      ```
+
      </details>
- 
+
 3. Run the below command for solution:  
- 
+
      <details>
- 
+
      ```
      apiVersion: v1
      kind: Pod
@@ -61,12 +62,13 @@
            value: beta
      status: {}
      ```
+
      </details>
- 
+
 4. Run the below command for solution:
- 
+
      <details>
-     
+
      ```
      apiVersion: v1
      kind: Pod
@@ -80,12 +82,13 @@
        - name: non-root-pod
          image: redis:alpine
      ```
+
      </details>
- 
+
 5. Run the below command for solution:  
- 
+
      <details>
- 
+
      ```
      apiVersion: networking.k8s.io/v1
      kind: NetworkPolicy
@@ -103,17 +106,19 @@
          - protocol: TCP
            port: 80
      ```
+
      </details>
-   
-6. Run the below command for solution: 
- 
+
+6. Run the below command for solution:
+
      <details>
- 
+
      ```
      kubectl taint node node01 env_type=production:NoSchedule
      ```
 
      Deploy `dev-redis` pod and to ensure that workloads are not scheduled to this `node01` worker node.
+
      ```
      kubectl run dev-redis --image=redis:alpine
 
@@ -121,6 +126,7 @@
      ```
 
      Deploy new pod `prod-redis` with toleration to be scheduled on `node01` worker node.
+
      ```
      apiVersion: v1
      kind: Pod
@@ -137,20 +143,23 @@
          value: production     
      ```
 
-     View the pods with short details: 
+     View the pods with short details:
+
      ```
      kubectl get pods -owide | grep prod-redis
      ```
+
      </details>
- 
-7. Run the below command for solution: 
- 
+
+7. Run the below command for solution:
+
      <details>
- 
+
      ```
      kubectl create namespace hr
      kubectl run hr-pod --image=redis:alpine --namespace=hr --labels=environment=production,tier=frontend
      ```
+
      </details>
 
 8. Run the below command for solution:
@@ -164,15 +173,15 @@
      
      kubectl cluster-info --kubeconfig=/root/CKA/super.kubeconfig     
      ```
+
      </details>
 
 9. Run the below command for solution:
-   
+
      <details>
-     
+
      ```
      sed -i 's/kube-contro1ler-manager/kube-controller-manager/g' kube-controller-manager.yaml
      ```
+
      </details>
-
-

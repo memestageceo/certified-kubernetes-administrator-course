@@ -1,7 +1,9 @@
 # Practice Test - Certificates API
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-certificates-api/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-certificates-api/)
 
 Solutions to the practice test - certificate API
+
 - A new member akshay joined our team. He requires access to our cluster. The Certificate Signing Request is at the /root location.
 
   <details>
@@ -25,7 +27,7 @@ Solutions to the practice test - certificate API
   $ kubectl get csr
   ```
   </details>
-    
+
 - Run the command kubectl certificate approve akshay
   
   <details>

@@ -1,14 +1,17 @@
 # Practice Test - Multi-Container Pods
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-multi-container-pods/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-multi-container-pods/)
   
 Solutions to practice test - multi-container pods
+
 - Identify the number of containers running in the 'red' pod.
   
   <details>
   
   ```
-  $ kubectl get pod red
+  kubectl get pod red
   ```
+
   </details>
   
 - Identify the name of the containers running in the 'blue' pod.
@@ -18,7 +21,7 @@ Solutions to practice test - multi-container pods
   $ kubectl describe pod blue
   ```
   </details>
-    
+
 - Answer file is located at /var/answers/answer-yellow.yaml
 
   <details>
@@ -55,5 +58,5 @@ Solutions to practice test - multi-container pods
   
 - Answer file is located at /var/answers/answer-app.yaml
   
-- Inspect the Kibana UI. You should now see logs appearing in the 'Discover' section. You might have to wait for a couple of minutes for the logs to populate. You might have to create an index pattern to list the logs. If not sure check this video: https://bit.ly/2EXYdHf
+- Inspect the Kibana UI. You should now see logs appearing in the 'Discover' section. You might have to wait for a couple of minutes for the logs to populate. You might have to create an index pattern to list the logs. If not sure check this video: <https://bit.ly/2EXYdHf>
   

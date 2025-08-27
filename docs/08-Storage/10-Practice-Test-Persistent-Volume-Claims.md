@@ -1,6 +1,6 @@
 # Practice Test - Persistent Volume Claims
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-persistent-volume-claims/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-persistent-volume-claims/)
 
 #### Solution
 
@@ -11,7 +11,7 @@
       ```
       OK
       ```
-    
+
      </details>
 
   2. Check the Solution
@@ -21,8 +21,9 @@
       ```
       OK
       ```
+
      </details>
- 
+
   3. Check the Solution
 
      <details>
@@ -30,10 +31,11 @@
       ```
       No
       ```
+
      </details>
 
   4. Check the Solution
-    
+
      <details>
 
       ```
@@ -60,6 +62,7 @@
             # this field is optional
             type: Directory
       ```
+
       </details>
 
   5. Check the Solution
@@ -98,6 +101,7 @@
           requests:
             storage: 50Mi
       ```
+
      </details>
 
   7. Check the Solution
@@ -107,6 +111,7 @@
       ```
       PENDING
       ```
+
      </details>
 
   8. Check the Solution
@@ -116,6 +121,7 @@
       ```
       AVAILABLE
       ```
+
      </details>
 
   9. Check the Solution
@@ -125,12 +131,13 @@
       ```
       Access Modes Mismatch
       ```
+
      </details>
 
   10. Check the Solution
 
       <details>
- 
+
        ```
        kind: PersistentVolumeClaim
        apiVersion: v1
@@ -143,21 +150,23 @@
            requests:
              storage: 50Mi
        ```
+
       </details>
 
   11. Check the Solution
 
       <details>
- 
+
        ```
        100Mi
        ```
+
       </details>
 
   12. Check the Solution
 
       <details>
- 
+
        ```
        apiVersion: v1
        kind: Pod
@@ -179,67 +188,75 @@
            persistentVolumeClaim:
              claimName: claim-log-1
        ```
+
       </details>
 
   13. Check the Solution
 
       <details>
- 
+
        ```
        Retain
        ```
+
       </details>
 
   14. Check the Solution
 
       <details>
- 
+
        ```
        The PV is not delete but not available
        ```
+
       </details>
 
   15. Check the Solution
 
       <details>
- 
+
        ```
        The PVC is stuck in `terminating` state
        ```
+
       </details>
 
   16. Check the Solution
 
       <details>
- 
+
        ```
        The PVC is being used by a POD
        ```
+
       </details>
 
   17. Check the Solution
 
       <details>
- 
+
        ```
        kubectl delete pod webapp
        ```
+
       </details>
 
   18. Check the Solution
 
       <details>
- 
+
        ```
        Deleted
        ```
+
       </details>
 
   19. Check the Solution
 
       <details>
- 
+
        ```
        Released
        ```
+
       </details>

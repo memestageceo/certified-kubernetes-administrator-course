@@ -29,6 +29,7 @@ The option `-o StrictHostKeyChecking=no` tells it not to ask if you want to conn
 ```bash
 ssh-copy-id -o StrictHostKeyChecking=no ubuntu@node01
 ```
+
 ```bash
 ssh-copy-id -o StrictHostKeyChecking=no ubuntu@node02
 ```
@@ -41,7 +42,6 @@ Number of key(s) added: 1
 Now try logging into the machine, with:   "ssh 'ubuntu@node01'"
 and check to make sure that only the key(s) you wanted were added.
 ```
-
 
 Next: [Node Setup](../../generic/04-node-setup.md)<br>
 Prev: [Compute Resources](02-compute-resources.md)

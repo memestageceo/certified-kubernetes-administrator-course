@@ -1,23 +1,22 @@
 # Storage Class
 
-  - Take me to [Lecture](https://kodekloud.com/topic/storage-class/)
+- Take me to [Lecture](https://kodekloud.com/topic/storage-class/)
 
 In this section, we will take a look at **Storage Class**
 
 - We discussed about how to create Persistent Volume and Persistent Volume Claim and We also saw that how to use into the Pod's volume to claim that volume space.
-- We created Persistent Volume but before this if we are taking a volume from Cloud providers like GCP, AWS, Azure. We need to first create disk in the Google Cloud as an example. 
-- We need to create manually each time when we define in the Pod definition file. that's called **Static Provisioning**. 
+- We created Persistent Volume but before this if we are taking a volume from Cloud providers like GCP, AWS, Azure. We need to first create disk in the Google Cloud as an example.
+- We need to create manually each time when we define in the Pod definition file. that's called **Static Provisioning**.
 
 #### Static Provisioning
 
 ![class-18](../../images/class18.PNG)
 
-
 #### Dynamic Provisioning
 
 ![class-19](../../images/class19.PNG)
 
-- Now we have a Storage Class, So we no longer to define Persistent Volume. It will create automatically when a Storage Class is created. It's called **Dynamic Provisioning**. 
+- Now we have a Storage Class, So we no longer to define Persistent Volume. It will create automatically when a Storage Class is created. It's called **Dynamic Provisioning**.
 
 ```
 sc-definition.yaml
@@ -60,10 +59,12 @@ spec:
    requests:
      storage: 500Mi
 ```
-```
-$ kubectl create -f pvc-definition.yaml
 
 ```
+kubectl create -f pvc-definition.yaml
+
+```
+
 #### Create a Pod
 
 ```
@@ -85,15 +86,17 @@ spec:
       persistentVolumeClaim:
         claimName: myclaim
 ```
+
 ```
-$ kubectl create -f pod-definition.yaml
+kubectl create -f pod-definition.yaml
 ```
+
 #### Provisioner
 
 ![class-20](../../images/class20.PNG)
 
 #### Kubernetes Storage Class Reference Docs
 
-- https://kubernetes.io/docs/concepts/storage/storage-classes/
-- https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#storageclasses
-- https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html
+- <https://kubernetes.io/docs/concepts/storage/storage-classes/>
+- <https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#storageclasses>
+- <https://docs.aws.amazon.com/eks/latest/userguide/storage-classes.html>

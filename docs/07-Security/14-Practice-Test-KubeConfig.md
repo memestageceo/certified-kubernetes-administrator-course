@@ -1,7 +1,9 @@
 # Practice Test - KubeConfig
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-kubeconfig/)
- 
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-kubeconfig/)
+
 Solutions to the practice test - kubeconfig
+
 - Look for the kube config file under `/root/.kube`
   
   <details>
@@ -9,7 +11,7 @@ Solutions to the practice test - kubeconfig
   $ ls -l /root/.kube
   ```
   </details>
-    
+
 - Run the kubectl config view command and count the number of clusters
 
   <details>
@@ -17,7 +19,7 @@ Solutions to the practice test - kubeconfig
   $ kubectl config view
   ```
   </details>
-    
+
 - Run the command `kubectl config view` and count the number of users
 
   <details>
@@ -73,7 +75,7 @@ Solutions to the practice test - kubeconfig
   $ kubectl config view --kubeconfig my-kube-config
   ```
   </details>
-    
+
 - What is the name of the client-certificate file configured for the 'aws-user'?
   
   <details>
@@ -121,9 +123,3 @@ Solutions to the practice test - kubeconfig
   master $ kubectl get pods
   No resources found in default namespace.
  </details>
-
-
-
-
-
-

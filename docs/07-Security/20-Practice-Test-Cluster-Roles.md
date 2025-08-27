@@ -1,14 +1,16 @@
 # Practice Test - Cluster Roles
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cluster-roles/)
- 
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cluster-roles/)
+
 Solutions to practice test - cluster roles
+
 - Run the command kubectl get clusterroles --no-headers | wc -l or kubectl get clusterroles --no-headers -o json | jq '.items | length'
   
   <details>
   
   ```
-  $ kubectl get clusterroles --no-headers | wc -l (or)
-  $ kubectl get clusterroles --no-headers -o json | jq '.items | length'
+  kubectl get clusterroles --no-headers | wc -l (or)
+  kubectl get clusterroles --no-headers -o json | jq '.items | length'
   ```
   
   </details>
@@ -18,8 +20,8 @@ Solutions to practice test - cluster roles
   <details>
   
   ```
-  $ kubectl get clusterrolebindings --no-headers | wc -l (or)
-  $ kubectl get clusterrolebindings --no-headers -o json | jq '.items | length'
+  kubectl get clusterrolebindings --no-headers | wc -l (or)
+  kubectl get clusterrolebindings --no-headers -o json | jq '.items | length'
   ```
   
   </details>
@@ -29,7 +31,7 @@ Solutions to practice test - cluster roles
   <details>
   
   ```
-  $ Cluster roles are cluster wide and not part of any namespace
+  Cluster roles are cluster wide and not part of any namespace
   ```
   
   </details>
@@ -39,7 +41,7 @@ Solutions to practice test - cluster roles
   <details>
   
   ```
-  $ kubectl describe clusterrolebinding cluster-admin
+  kubectl describe clusterrolebinding cluster-admin
   ```
   
   </details>
@@ -49,7 +51,7 @@ Solutions to practice test - cluster roles
   <details>
   
   ```
-  $ kubectl describe clusterrole cluster-admin
+  kubectl describe clusterrole cluster-admin
   ```
   
   </details>
@@ -59,7 +61,7 @@ Solutions to practice test - cluster roles
   <details>
   
   ```
-  $ kubectl create -f /var/answers/michelle-node-admin.yaml
+  kubectl create -f /var/answers/michelle-node-admin.yaml
   ```
   
   </details>
@@ -69,13 +71,8 @@ Solutions to practice test - cluster roles
   <details>
   
   ```
-  $ kubectl create -f /var/answers/michelle-storage-admin.yaml
+  kubectl create -f /var/answers/michelle-storage-admin.yaml
   ```
   
   </details>
   
-  
-
-
-
-

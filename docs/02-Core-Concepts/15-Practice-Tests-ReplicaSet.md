@@ -1,7 +1,9 @@
 # Practice Test - ReplicaSets
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-replicasets/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-replicasets/)
 
 #### Solutions for the replicaset practice tests
+
 1. <details>
    <summary>How many pods exist on the system?</summary>
 
@@ -23,7 +25,6 @@
    Count the number of ReplicaSets  (if any)
 
    </details>
-
 
 1. <details>
    <summary>How about now? How many ReplicaSets do you see?</summary>
@@ -91,6 +92,7 @@
    ```
    kubectl delete pod new-replica-set-XXXX
    ```
+
    </details>
 
 1. <details>
@@ -120,14 +122,15 @@
    Get the apiVersion for replicaset
 
    ```
-   $ kubectl explain replicaset | grep VERSION
+   kubectl explain replicaset | grep VERSION
    ```
 
    Update the replicaset definition file in `vi` with correct version and then retry creation.
 
    ```
-   $ kubectl create -f replicaset-definition-1.yaml
+   kubectl create -f replicaset-definition-1.yaml
    ```
+
    </details>
 
 1. <details>
@@ -144,8 +147,9 @@
    The values for labels on lines 9 and 13 should match.
 
    ```
-   $ kubectl create -f replicaset-definition-2.yaml
+   kubectl create -f replicaset-definition-2.yaml
    ```
+
    </details>
 
 1. <details>
@@ -200,6 +204,7 @@
    -- OR --
 
    Scale it to zero, then back to 4
+
    ```
    kubectl scale rs new-replica-set --replicas 0
    kubectl scale rs new-replica-set --replicas 4
@@ -215,5 +220,3 @@
    ```
 
    </details>
-
-

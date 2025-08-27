@@ -1,7 +1,9 @@
 # Practice Test - View Certificates
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-view-certificate-details/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-view-certificate-details/)
   
 Solutions to practice test - view certificates
+
 - Identify the certificate file used for the kube-api server
   
   <details>
@@ -11,6 +13,7 @@ Solutions to practice test - view certificates
   
   Answer: /etc/kubernetes/pki/apiserver.crt
   ```
+
   </details>
   
 - Identify the Certificate file used to authenticate kube-apiserver as a client to ETCD Server
@@ -58,7 +61,7 @@ Solutions to practice test - view certificates
   
   <details>
   ```
-  $ openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text 
+  $ openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text
   ```
   </details>
   
@@ -102,17 +105,10 @@ Solutions to practice test - view certificates
   ```
   </details>
   
-- ETCD has its own CA. The right CA must be used for the ETCD-CA file in /etc/kubernetes/manifests/kube-apiserver.yaml. 
+- ETCD has its own CA. The right CA must be used for the ETCD-CA file in /etc/kubernetes/manifests/kube-apiserver.yaml.
   
   <details>
   ```
   View answer at /var/answers/kube-apiserver.yaml
   ```
   </details>
-
-
-
-
-
-
-  

@@ -1,15 +1,18 @@
 # Practice Test - Rolling Updates and Rollback
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-rolling-updates-and-rollbacks/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-rolling-updates-and-rollbacks/)
   
 Solutions to practice test - rolling updates and rollback
+
 - We have deployed a simple web application. Inspect the PODs and the Services
 
   <details>
   
   ```
-  $ kubectl get pods
-  $ kubectl get services
+  kubectl get pods
+  kubectl get services
   ```
+
   </details>
   
 - What is the current color of the web application?
@@ -19,8 +22,9 @@ Solutions to practice test - rolling updates and rollback
   ```
   Access the web portal
   ```
+
   </details>
-    
+
 - Execute the script at /root/curl-test.sh.
 
 - Run the command 'kubectl describe deployment' and look at 'Desired Replicas'
@@ -28,8 +32,9 @@ Solutions to practice test - rolling updates and rollback
   <details>
   
   ```
-  $ kubectl describe deployment
+  kubectl describe deployment
   ```
+
   </details>
   
 - Run the command 'kubectl describe deployment' and look for 'Images'
@@ -37,8 +42,9 @@ Solutions to practice test - rolling updates and rollback
   <details>
   
   ```
-  $ kubectl describe deployment
+  kubectl describe deployment
   ```
+
   </details>
   
 - Run the command 'kubectl describe deployment' and look at 'StrategyType'
@@ -46,8 +52,9 @@ Solutions to practice test - rolling updates and rollback
   <details>
   
   ```
-  $ kubectl describe deployment
+  kubectl describe deployment
   ```
+
   </details>
   
 - If you were to upgrade the application now what would happen?
@@ -57,6 +64,7 @@ Solutions to practice test - rolling updates and rollback
   ```
   PODs are upgraded few at a time
   ```
+
   </details>
   
 - Run the command 'kubectl edit deployment frontend' and modify the required feild
@@ -64,10 +72,11 @@ Solutions to practice test - rolling updates and rollback
   <details>
   
   ```
-  $ kubectl edit deployment frontend
+  kubectl edit deployment frontend
   ```
+
   </details>
-    
+
 - Execute the script at /root/curl-test.sh.
 
 - Look at the Max Unavailable value under RollingUpdateStrategy in deployment details
@@ -83,7 +92,7 @@ Solutions to practice test - rolling updates and rollback
   <details>
   
   ```
-  $ kubectl edit deployment frontend
+  kubectl edit deployment frontend
   ```
   
   </details>
@@ -93,12 +102,9 @@ Solutions to practice test - rolling updates and rollback
   <details>
   
   ```
-  $ kubectl edit deployment frontend
+  kubectl edit deployment frontend
   ```
+
   </details>
   
 - Execute the script at /root/curl-test.sh.
-
-
-
-

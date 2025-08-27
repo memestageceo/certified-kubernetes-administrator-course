@@ -16,9 +16,9 @@ Required to download the repo. It is normally pre-installed on Mac, but not on W
 
 Download and Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) on any one of the supported platforms:
 
- - Windows hosts
- - MacOS hosts x86 only. For Apple Silicon (M-series processors), see [here](../../apple-silicon/).
- - Linux distributions
+* Windows hosts
+* MacOS hosts x86 only. For Apple Silicon (M-series processors), see [here](../../apple-silicon/).
+* Linux distributions
 
 This lab was last tested with VirtualBox 7.0.12, though newer versions should be ok.
 
@@ -73,7 +73,6 @@ Note that you do not need to edit any of the other scripts to make the above cha
 It is *recommended* that you leave the pod and service networks as the defaults. If you change them then you will also need to edit the Weave networking manifests to accommodate your change.
 
 If you do decide to change any of these, please treat as personal preference and do not raise a pull request.
-
 
 ### Pod Network
 

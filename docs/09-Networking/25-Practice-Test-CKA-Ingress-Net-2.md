@@ -1,8 +1,8 @@
 # Practice Test CKA Ingress 2
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cka-ingress-networking-2/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cka-ingress-networking-2/)
 
-#### Solution 
+#### Solution
 
   1. Check the Solution
 
@@ -11,6 +11,7 @@
       ```
       OK
       ```
+
      </details>
 
   1. Check the Solution
@@ -20,6 +21,7 @@
       ```
       kubectl create namespace ingress-nginx
       ```
+
      </details>
 
   1. Check the Solution
@@ -29,6 +31,7 @@
       ```
       kubectl create configmap ingress-nginx-controller --namespace ingress-nginx
       ```
+
      </details>
 
   1. Check the Solution
@@ -39,6 +42,7 @@
       kubectl create serviceaccount ingress-nginx --namespace ingress-nginx
       kubectl create serviceaccount ingress-nginx-admission --namespace ingress-nginx
       ```
+
      </details>
 
   1. Check the Solution
@@ -50,6 +54,7 @@
 
       kubectl get roles,rolebindings --namespace ingress-nginx
       ```
+
      </details>
 
   1. Check the Solution
@@ -63,7 +68,6 @@
      ```
 
      There is a `Deployment` and a `Service` in this file, There are issues with each.
-
 
      1. The `namespace` of the deployment is incorrect.
      1. indentation error at line 74 (use `:set nu` in vi to turn on line numbers)
@@ -215,6 +219,7 @@
           app.kubernetes.io/name: ingress-nginx
         type: NodePort      
         ```
+
      </details>
   
   1. Check the Solution
@@ -249,13 +254,14 @@
                 port:
                   number: 8080
       ```
+
      </details>
 
   1. Check the Solution
 
      <details>
 
-      Press the `Ingress` button above the terminal pane. 
+      Press the `Ingress` button above the terminal pane.
       In the browser tab that opens, try appending `/wear` or `/watch` after `labs.kodekloud.com` in the browser address bar.
 
      </details>

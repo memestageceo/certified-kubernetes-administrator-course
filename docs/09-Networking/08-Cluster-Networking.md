@@ -1,6 +1,6 @@
 # Pre-requisite Cluster Networking
 
-  - Take me to [Lecture](https://kodekloud.com/topic/cluster-networking/)
+- Take me to [Lecture](https://kodekloud.com/topic/cluster-networking/)
 
 In this section, we will take a look at **Pre-requisite of the Cluster Networking**
 
@@ -13,33 +13,30 @@ In this section, we will take a look at **Pre-requisite of the Cluster Networkin
 - To view the hostname
 
 ```
-$ hostname 
+hostname 
 ```
 
 - To view the IP addr of the system
 
 ```
-$ ip a
+ip a
 ```
-
 
 ## Set the hostname
 
 ```
-$ hostnamectl set-hostname <host-name>
+hostnamectl set-hostname <host-name>
 
-$ exec bash
+exec bash
 ```
 
 ## View the Listening Ports of the system
 
 ```
-$ netstat -nltp
+netstat -nltp
 ```
-
-
 
 #### References Docs
 
-- https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#check-required-ports
-- https://kubernetes.io/docs/concepts/cluster-administration/networking/
+- <https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#check-required-ports>
+- <https://kubernetes.io/docs/concepts/cluster-administration/networking/>

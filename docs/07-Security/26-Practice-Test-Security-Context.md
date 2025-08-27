@@ -1,13 +1,15 @@
 # Practice Test - Security Context
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-security-contexts/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-security-contexts/)
   
 Solutions to practice test - security context
+
 - Run the command 'kubectl exec ubuntu-sleeper -- whoami' and count the number of pods.
 
   <details>
   
   ```
-  $ kubectl exec ubuntu-sleeper whoami
+  kubectl exec ubuntu-sleeper whoami
   ```
   
   </details>
@@ -28,7 +30,7 @@ Solutions to practice test - security context
   </details>
   
 - The User ID defined in the securityContext of the container overrides the User ID in the POD.
- 
+
 - The User ID defined in the securityContext of the POD is carried over to all the PODs in the container.
 
 - Run kubectl exec -it ubuntu-sleeper -- date -s '19 APR 2012 11:14:00'
@@ -36,7 +38,7 @@ Solutions to practice test - security context
   <details>
   
   ```
-  $ kubectl exec -it ubuntu-sleeper -- date -s '19 APR 2012 11:14:00'
+  kubectl exec -it ubuntu-sleeper -- date -s '19 APR 2012 11:14:00'
   ```
   
   </details>
@@ -61,13 +63,12 @@ Solutions to practice test - security context
   
   </details>
   
- - Now try to run the below command in the pod to set the date. If the security capability was added correctly, it should work. If it doesn't make sure you changed the user back to root.
+- Now try to run the below command in the pod to set the date. If the security capability was added correctly, it should work. If it doesn't make sure you changed the user back to root.
   
    <details>
   
    ```
-   $ kubectl exec -it ubuntu-sleeper -- date -s '19 APR 2012 11:14:00'
+   kubectl exec -it ubuntu-sleeper -- date -s '19 APR 2012 11:14:00'
    ```
   
    </details>
-   

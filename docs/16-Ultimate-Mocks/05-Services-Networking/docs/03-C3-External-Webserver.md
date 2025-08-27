@@ -8,7 +8,6 @@ For this question, please set the context to cluster3 by running:
 kubectl config use-context cluster3
 ```
 
-
 We have an **external** webserver running on `student-node` which is exposed at port `9999`. We have created a service called `external-webserver-cka03-svcn` that can connect to our local webserver from within the kubernetes cluster3 but at the moment it is not working as expected.
 
 Fix the issue so that other pods within cluster3 can use `external-webserver-cka03-svcn` service to access the webserver.

@@ -4,7 +4,6 @@ We will provision the following infrastructure. The infrastructure will be creat
 
 ![Infra](../../../images/kubeadm-aws-architecture.png)
 
-
 As can be seen in this diagram, we will create three EC2 instances to form the cluster and a further one `student-node` from which to perform the configuration. We build the infrastructure using Terraform from AWS CloudShell (so you don't have to install Terraform on your workstation), then log into `student-node` which can access the cluster nodes. This relationship between `student-node` and the cluster nodes is similar to CKA Ultimate Mocks and how the real exam works - you start on a separate node (in this case `student-node`), then use SSH to connect to cluster nodes. Note that SSH connections are only possible in the direction of the arrows. It is not possible to SSH from e.g. `controlplane` directly to `node01`. You must `exit` to `student-node` first. This is also how it is in the exam. `student-node` assumes the role of a [bastion host](https://en.wikipedia.org/wiki/Bastion_host).
 
 We will also set up direct connection from your workstation to the node ports of the workers so that you can browse any NodePort services you create (see security below).
@@ -24,6 +23,7 @@ Security issues that would make this unsuitable for a genuine production cluster
 * A cloud load balancer coupled with an ingress controller would be provisioned to provide ingress to the cluster. It is _definitely_ not recommended to expose the worker nodes' node ports to the Internet as we are doing here!!!
 
 Other things that will be configured by the Terraform code
+
 * Host names set on the nodes: `controlplane`, `node01`, `node02`
 * Content of `/etc/hosts` set up on all nodes for easy use of `ssh` command from `student-node`.
 * Generation and distribution of a key pair for logging into instances via SSH.
@@ -35,7 +35,6 @@ Let's go ahead and get the infrastructure built!
 Note that you must have KodeKloud Pro subscription to run an AWS playground. If you have your own AWS account, this should still work, however you will bear the cost for any resources created until you delete them.
 
 We will run this entire lab in AWS CloudShell which is a Linux terminal you run inside the AWS console and has most of what we need preconfigured, such as git and the AWS credentials needed by Terraform. [Click here](https://us-east-1.console.aws.amazon.com/cloudshell/home?region=us-east-1) to open CloudShell - note that his link will not work until you have signed into the AWS console.
-
 
 ## Install Terraform
 
@@ -119,6 +118,7 @@ cd certified-kubernetes-administrator-course/kubeadm-clusters/aws/terraform
 We will install kubectl here so that we can run commands against the cluster when it is built
 
 1. Install latest version of kubectl and place in the user programs directory
+
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
     chmod +x kubectl
@@ -141,7 +141,7 @@ We will install kubectl here so that we can run commands against the cluster whe
 
 If using KodeKloud playground, this isn't strictly necessary as resources will be deleted when the playground ends.
 
-If you are using your own account, this is *crucial* as you will be billed for the resources created until you delete them - unless of course you want to keep it around and pay. Recall that this is *not* a production hardened installation and could pose a security risk to your account if you leave it lying around.
+If you are using your own account, this is _crucial_ as you will be billed for the resources created until you delete them - unless of course you want to keep it around and pay. Recall that this is _not_ a production hardened installation and could pose a security risk to your account if you leave it lying around.
 
 To delete
 
@@ -157,7 +157,6 @@ To delete
 Those of you who are also studying our Terraform courses should look at the terraform files and try to understand what is happening here.
 
 One point of note is that for the `node` instances, we create network interfaces for them as separate resources, then attach these ENIs to the instances when they are built. The reason for this is so that the IP addresses of the instances can be known in advance, such that during instance creation `/etc/hosts` may be created by the user_data script.
-
 
 Next: [Connectivity](./03-connectivity.md)<br/>
 Prev: [Prerequisites](./01-prerequisites.md)

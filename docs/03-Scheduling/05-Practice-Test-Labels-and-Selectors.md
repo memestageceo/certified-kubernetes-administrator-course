@@ -1,8 +1,10 @@
 # Practice Test - Labels and Selectors
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-labels-and-selectors/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-labels-and-selectors/)
 
 Solutions to Practice Test - Labels and Selectors
-1.  <details>
+
+1. <details>
     <summary>We have deployed a number of PODs. They are labelled with tier, env and bu. How many PODs exist in the dev environment (env)?</summary>
 
     Here we are filtering pods by the value olf a label
@@ -15,7 +17,7 @@ Solutions to Practice Test - Labels and Selectors
 
     </details>
 
-1.  <details>
+1. <details>
     <summary>How many PODs are in the finance business unit (bu)?</summary>
 
     Similarly ...
@@ -27,7 +29,7 @@ Solutions to Practice Test - Labels and Selectors
     Count the pods (if any)
     </details>
 
-1.  <details>
+1. <details>
     <summary>How many objects are in the prod environment including PODs, ReplicaSets and any other objects?</summary>
 
     ```
@@ -37,7 +39,7 @@ Solutions to Practice Test - Labels and Selectors
     Count everything (if anything)
     </details>
 
-1.  <details>
+1. <details>
     <summary>Identify the POD which is part of the prod environment, the finance BU and of frontend tier?</summary>
 
     We can combine label expressions with comma. Only items with _all_ the given label/value pairs will be returned, i.e. it is an `and` condition.
@@ -45,6 +47,7 @@ Solutions to Practice Test - Labels and Selectors
     ```
     kubectl get all --selector env=prod,bu=finance,tier=frontend
     ```
+
     </details>
 
 1. <details>
@@ -61,7 +64,7 @@ Solutions to Practice Test - Labels and Selectors
    The values for labels on lines 9 and 13 should match.
 
    ```
-   $ kubectl create -f replicaset-definition-2.yaml
+   kubectl create -f replicaset-definition-2.yaml
    ```
-   </details>
 
+   </details>

@@ -1,8 +1,8 @@
 # Practice Test CKA Ingress 1
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cka-ingress-networking-1/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cka-ingress-networking-1/)
 
-#### Solution 
+#### Solution
 
   1. Check the Solution
 
@@ -11,6 +11,7 @@
       ```
       Ok
       ```
+
      </details>
   
   2. Check the Solution
@@ -20,6 +21,7 @@
       ```
       INGRESS-SPACE
       ```
+
      </details>
 
   3. Check the Solution
@@ -29,6 +31,7 @@
       ```
       NGINX-INGRESS-CONTROLLER
       ```
+
      </details>
 
   4. Check the Solution
@@ -38,6 +41,7 @@
       ```
       APP-SPACE
       ```
+
      </details>
 
   5. Check the Solution
@@ -47,6 +51,7 @@
       ```
       3
       ```
+
      </details>
 
   6. Check the Solution
@@ -56,6 +61,7 @@
       ```
       APP-SPACE
       ```
+
      </details>
 
   7. Check the Solution
@@ -65,6 +71,7 @@
       ```
       INGRESS-WEAR-WATCH
       ```
+
      </details>
 
   8. Check the Solution
@@ -74,6 +81,7 @@
       ```
       ALL-HOSTS(*)
       ```
+
      </details>
 
   9. Check the Solution
@@ -83,6 +91,7 @@
       ```
       WEAR-SERVICE
       ```
+
      </details>
 
   10. Check the Solution
@@ -92,6 +101,7 @@
        ```
         /WATCH
        ```
+
       </details>
 
   11. Check the Solution
@@ -101,6 +111,7 @@
        ```
         DEFAULT-HTTP-BACKEND
        ```
+
       </details>
 
   12. Check the Solution
@@ -110,6 +121,7 @@
        ```
         404-ERROR-PAGE
        ```
+
       </details>
 
   13. Check the Solution
@@ -119,19 +131,21 @@
        ```
         OK
        ```
+
       </details>
 
   14. Check the Solution
 
       <details>
- 
+
         ```
         kubectl edit ingress --namespace app-space
         ```
+
         Change the path from /watch to /stream
-    
+
         OR
- 
+
         ```yaml
         apiVersion: v1
         items:
@@ -166,6 +180,7 @@
           resourceVersion: ""
           selfLink: ""
        ```
+
       </details>
 
   15. Check the Solution
@@ -175,6 +190,7 @@
        ```
         OK
        ```
+
       </details>
 
   16. Check the Solution
@@ -184,6 +200,7 @@
        ```
         404 ERROR PAGE
        ```
+
       </details>
 
   17. Check the Solution
@@ -193,6 +210,7 @@
        ```
         OK
        ```
+
       </details>
 
   18. Check the Solution
@@ -242,6 +260,7 @@
          resourceVersion: ""
          selfLink: ""
        ```
+
       </details>
 
   19. Check the Solution
@@ -251,6 +270,7 @@
        ```
         OK
        ```
+
       </details>
 
   20. Check the Solution
@@ -260,6 +280,7 @@
        ```
         CRITICAL-SPACE
        ```
+
       </details>
 
   21. Check the Solution
@@ -269,6 +290,7 @@
        ```
         WEBAPP-PAY
        ```
+
       </details>
 
   22. Check the Solution
@@ -296,6 +318,7 @@
                   port:
                     number: 8282 
        ```
+
         </details>
 
   23. Check the Solution
@@ -305,4 +328,5 @@
        ```
         OK
        ```
+
       </details>

@@ -6,4 +6,3 @@ In this bonus section we will discuss some useful tips that can be used preparat
 - [02-Client-for-testing-network-things](docs/02-client--for-testing-network-things.md
 
 )
-

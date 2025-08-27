@@ -1,12 +1,11 @@
 # Practice Test - Application Failure
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-application-failure/) of the Application Failure
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-application-failure/) of the Application Failure
 
 ### Solution
 
-1.  <details>
+1. <details>
     <summary>A simple 2 tier application is deployed in the <code>alpha</code> namespace. It must display a green web page on success. Click on the <code>App</code> tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue.</summary>
-
 
     Stick to the given architecture. Use the same names and port numbers as given in the below architecture diagram. Feel free to edit, delete or recreate objects as necessary.
 
@@ -20,7 +19,7 @@
 
       This is a DNS lookup issue. Coredns does not know any service called `mysql-service`, however the architecture diagram says that there should be this service.
 
-    1.  Examine services in the `alpha` namespace
+    1. Examine services in the `alpha` namespace
 
         ```bash
         kubectl get service -n alpha
@@ -28,7 +27,7 @@
 
         We see there is a service `mysql` so the likelihood is that the service is deployed with incorrect name
 
-    1.  Fix it
+    1. Fix it
 
         Note that you cannot use `kubectl edit` to change a resource name.
 
@@ -58,7 +57,7 @@
 
     </details>
 
-2.  <details>
+2. <details>
     <summary> The same 2 tier application is deployed in the <code>beta</code> namespace. It must display a green web page on success. Click on the <code>App</code> tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue.</summary>
 
     Stick to the given architecture. Use the same names and port numbers as given in the below architecture diagram. Feel free to edit, delete or recreate objects as necessary.
@@ -114,7 +113,7 @@
 
         or simply get the yaml for the pod.
 
-3.  <details>
+3. <details>
     <summary>The same 2 tier application is deployed in the <code>gamma</code> namespace. It must display a green web page on success. Click on the <code>App</code> tab at the top of your terminal to view your application. It is currently failed or unresponsive. Troubleshoot and fix the issue.</summary>
 
     Stick to the given architecture. Use the same names and port numbers as given in the below architecture diagram. Feel free to edit, delete or recreate objects as necessary.
@@ -180,7 +179,7 @@
 
     </details>
 
-4.  <details>
+4. <details>
     <summary>The same 2 tier application is deployed in the <code>delta</code> namespace. It must display a green web page on success. Click on the <code>App</code> tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue.</summary>
 
     Stick to the given architecture. Use the same names and port numbers as given in the below architecture diagram. Feel free to edit, delete or recreate objects as necessary.
@@ -197,7 +196,7 @@
 
         So this time the fix is going to be in the application deployment, rather than in the service.
 
-    1.  Fix the deployment
+    1. Fix the deployment
 
         ```
         kubectl edit deployment webapp-mysql -n delta
@@ -229,7 +228,7 @@
 
     </details>
 
-5.  <details>
+5. <details>
     <summary>The same 2 tier application is deployed in the <code>epsilon</code> namespace. It must display a green web page on success. Click on the <code>App</code> tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue.</summary>
 
     The question indicates there are *two* issues that need fixing.
@@ -248,7 +247,7 @@
 
         Vaildate the environment against the values provided in the architecture diagram. Looks like the same issue as previous question, so fix that the same way.
 
-    1.  Wait! We fixed that, but it's *still* not working!
+    1. Wait! We fixed that, but it's *still* not working!
 
         Check the mysql pod, since mysql also needs some credential information on its end.
 
@@ -289,7 +288,7 @@
 
     </details>
 
-6.  <details>
+6. <details>
     <summary>The same 2 tier application is deployed in the <code>zeta</code> namespace. It must display a green web page on success. Click on the <code>App</code> tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue.</summary>
 
     The question indicates there are *three* issues to fix.
@@ -306,7 +305,7 @@
 
         On KodeKloud labs, the `30081-port` part indicates a node port it's trying to connect to. Note also that the infrastructure diagram states that `30081` should be the `web-service` nodeport.
 
-    1.  Examine `web-service` since that's how we view the app.
+    1. Examine `web-service` since that's how we view the app.
 
         ```
         kubectl edit service -n zeta web-service
@@ -341,11 +340,11 @@
           type: NodePort
         ```
 
-    1.  Retry the app in the browser
+    1. Retry the app in the browser
 
         We have seen this message before! Fix it as per above, using namesapce `zeta`.
 
-    1.  Retry the app in the browser
+    1. Retry the app in the browser
 
         We have also seen this message before! Fix it as per above, using namesapce `zeta`.
 

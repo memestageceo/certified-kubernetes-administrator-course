@@ -24,13 +24,13 @@ Troubleshoot and fix this issue, making sure that orange-pvc-cka13-trb PVC is in
 
     Note the message "requested PV is too small". We must adjust the PVC to fit
 
-2.  Describe the PV and determine its properties. Note that PVC properties must be adjusted to match
+2. Describe the PV and determine its properties. Note that PVC properties must be adjusted to match
 
     ```
     kubectl describe pv orange-pv-cka13-trb
     ```
 
-3.  Adjust the PVC. Note that you cannot directly edit a PVC size to be smaller, so we have to replace it.
+3. Adjust the PVC. Note that you cannot directly edit a PVC size to be smaller, so we have to replace it.
 
     ```
     kubectl get pvc orange-pvc-cka13-trb -o yaml  > pvc.yaml

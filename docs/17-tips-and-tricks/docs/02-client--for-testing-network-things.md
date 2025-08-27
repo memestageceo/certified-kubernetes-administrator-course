@@ -30,6 +30,5 @@ $ kubectl exec tester -it -- bash
 Or run the commands directly if you need to send the results to a file
 
 ```
-$ kubectl exec tester -it -- nslookup my-service.default.svc > /opt/some-file.txt
+kubectl exec tester -it -- nslookup my-service.default.svc > /opt/some-file.txt
 ```
-

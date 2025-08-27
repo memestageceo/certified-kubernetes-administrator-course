@@ -25,16 +25,19 @@ export TF_VAR_ARM_TENANT_ID=<Paste the value>
 export TF_VAR_ARM_SUBSCRIPTION_ID=<Paste the value>
 ```
 
-###  Using **Powershell (Windows)**
+### Using **Powershell (Windows)**
 
 Run the following commands (quotes required):
+
 ```pwsh
 $env:TF_VAR_ARM_CLIENT_ID = "<Paste the value>"
 $env:TF_VAR_ARM_CLIENT_SECRET = "<Paste the value>"
 $env:TF_VAR_ARM_TENANT_ID = "<Paste the value>"
 $env:TF_VAR_ARM_SUBSCRIPTION_ID = "<Paste the value>"
 ```
+
 ---
+
 ## Step 3: Configure <code>main.tf</code> for Your Shell
 
 Terraform uses the external data source to fetch environment variables via a script. Use the block corresponding to your shell.
@@ -42,6 +45,7 @@ Terraform uses the external data source to fetch environment variables via a scr
 * If Using PowerShell (Windows)
 
     Uncomment the following block in `main.tf` and comment out the Bash block if present.:
+
     ```
     data "external" "environment" {
       program = ["powershell", "-ExecutionPolicy", "Bypass", "-File", "${path.module}/environment.ps1"]
@@ -51,11 +55,13 @@ Terraform uses the external data source to fetch environment variables via a scr
 * For all other environments
 
     Uncomment the following block in `main.tf` and comment out the PowerShell block if present.:
+
     ```
     data "external" "environment" {
       program = ["bash", "${path.module}/environment.sh"]
     }
     ```
+
 * Only one external block (Git Bash or PowerShell) should be active at a time.
 * These environment variables are temporary and available only in the current terminal session.
 

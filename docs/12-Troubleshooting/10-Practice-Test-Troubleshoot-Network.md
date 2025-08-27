@@ -45,7 +45,6 @@ Note that this lab is sequential. You must solve test 1 completely before you ca
 
    </details>
 
-
 1. <details>
    <summary>Troubleshooting Test 2</summary>
 

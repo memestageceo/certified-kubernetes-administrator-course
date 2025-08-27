@@ -8,6 +8,4 @@ We have pre-set an environment variable `PRIMARY_IP` on all VMs which is the IP 
 ip route | grep default | awk '{ print $9 }'
 ```
 
-
 Next: [Compute Resources](02-compute-resources.md)
-

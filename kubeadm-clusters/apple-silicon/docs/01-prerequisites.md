@@ -2,14 +2,14 @@
 
 * Apple Silicon System (M1/M2/M3 etc)
 * 8GB RAM (16GB preferred).
-    * All configurations - One control plane node will be provisioned - `controlplane`
-    * If you have less than 16GB then only one worker node will be provisioned - `node01`
-    * If you have 16GB or more then two workers will be provisioned - `node01` and `node02`
+  * All configurations - One control plane node will be provisioned - `controlplane`
+  * If you have less than 16GB then only one worker node will be provisioned - `node01`
+  * If you have 16GB or more then two workers will be provisioned - `node01` and `node02`
 
 You'll need to install the following first.
 
-* Multipass - https://multipass.run/install. Follow the instructions to install it and check it is working properly. You should be able to successfully create a test Ubuntu VM following their instructions. Delete the test VM when you're done.
-* JQ - https://github.com/stedolan/jq/wiki/Installation#macos
+* Multipass - <https://multipass.run/install>. Follow the instructions to install it and check it is working properly. You should be able to successfully create a test Ubuntu VM following their instructions. Delete the test VM when you're done.
+* JQ - <https://github.com/stedolan/jq/wiki/Installation#macos>
 
 Additionally
 
@@ -47,7 +47,6 @@ It is *recommended* that you leave the pod and service networks as the defaults.
 
 If you do decide to change any of these, please treat as personal preference and do not raise a pull request.
 
-
 ## Running Commands in Parallel with iterm2
 
 [iterm2](https://iterm2.com/) which is a popular replacement for the standard Mac terminal application can be used to run the same commands on multiple compute instances at the same time. Some labs in this tutorial require running the same commands on multiple compute instances for instance installing the Kubernetes software. In those cases you may consider using iterm2 and splitting a window into multiple panes with *Broadcast input to all panes* enabled to speed up the provisioning process.
@@ -57,6 +56,7 @@ If you do decide to change any of these, please treat as personal preference and
 ![titerm2 screenshot](../../../images/iterm2-broadcast.png)
 
 To set up as per the image above, do the following in iterm2
+
 1. Right click and select split pane horizontally
 1. Do this again to create the third pane (if building 2 workers)
 1. In each pane, connect to a different node with `Multipass shell`

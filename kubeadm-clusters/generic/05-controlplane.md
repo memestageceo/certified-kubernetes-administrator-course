@@ -2,18 +2,16 @@
 
 [//]: # (host:controlplane)
 
-
-
 On the `controlplane` node
 
-1.  Set shell variables for the pod and network network CIDRs. The API server advertise address is using the predefined variable described in the [previous section](./04-node-setup.md). Note that with bridged mode virtual machines (the default for this installation) it is important that neither of the following IP ranges overlap your home network which for nearly all broadband router default configurations is `192.168.0.0/24`
+1. Set shell variables for the pod and network network CIDRs. The API server advertise address is using the predefined variable described in the [previous section](./04-node-setup.md). Note that with bridged mode virtual machines (the default for this installation) it is important that neither of the following IP ranges overlap your home network which for nearly all broadband router default configurations is `192.168.0.0/24`
 
     ```bash
     POD_CIDR=10.244.0.0/16
     SERVICE_CIDR=10.96.0.0/16
     ```
 
-1.  Start controlplane
+1. Start controlplane
 
     Here we are using arguments to `kubeadm` to ensure that it uses the networks and IP address we want rather than choosing defaults which may be incorrect.
 
@@ -23,11 +21,11 @@ On the `controlplane` node
 
 [//]: # (command:sleep 10)
 
-1.  Copy the `kubeadm join` command printed to your notepad to use on the worker nodes.
+1. Copy the `kubeadm join` command printed to your notepad to use on the worker nodes.
 
-1.  Set up the kubeconfig so it can be used by the user you are logged in as
+1. Set up the kubeconfig so it can be used by the user you are logged in as
 
-    1.  Create directory for kubeconfig, copy the admin kubeconfig as the default kubeconfig for current user (`vagrant` on VirtualBox, `ubuntu` on Multipass and AWS) and set the correct file permissions.</br>Note that in Linux, the command `id -u` returns your user name on the system and `id -g` returns your group name.
+    1. Create directory for kubeconfig, copy the admin kubeconfig as the default kubeconfig for current user (`vagrant` on VirtualBox, `ubuntu` on Multipass and AWS) and set the correct file permissions.</br>Note that in Linux, the command `id -u` returns your user name on the system and `id -g` returns your group name.
 
         ```bash
         {
@@ -38,13 +36,13 @@ On the `controlplane` node
         }
         ```
 
-    1.  Verify
+    1. Verify
 
         ```bash
         kubectl get pods -n kube-system
         ```
 
-1.  Install Calico CNI for cluster networking
+1. Install Calico CNI for cluster networking
 
     Calico is a CNI that supports Network Policies. An alternative CNI that's discussed in the course is Flannel, however Flannel does not support Netowrk Policy. It provides only the basic pod networking.
 
@@ -86,7 +84,7 @@ On the `controlplane` node
 
 [//]: # (command:sleep 120)
 
-1.  Verify controlplane
+1. Verify controlplane
 
     ```bash
     kubectl get pods -n kube-system
@@ -96,4 +94,3 @@ On the `controlplane` node
 
 Next: [Join Workers](./06-workers.md)</br>
 Prev: [Node setup](./04-node-setup.md)
-

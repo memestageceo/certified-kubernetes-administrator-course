@@ -24,4 +24,3 @@ Now we will configure the cluster options
 
 Prev: [Create Service Role](./02-create-service-role.md)<br/>
 Next: [Networking](./04-networking.md)
-

@@ -9,4 +9,3 @@ The more advanced features of GKE aren't enabled in KodeKloud playgrounds, so th
 
 Prev: [Provisioning Cluster](./02-create-cluster.md)<br/>
 Next: [Connect to Cluster](./04-connect.md)
-

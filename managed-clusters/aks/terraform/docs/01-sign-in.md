@@ -6,7 +6,7 @@ Last updated: March 2024
 
 Prerequisite: Pro (or higher) KodeKloud subscription
 
-Access this link: https://kodekloud.com/playgrounds/playground-azure and click `START LAB` to request a new Azure Playground instance. After a few seconds, you will receive your temporary Azure portal account like this:
+Access this link: <https://kodekloud.com/playgrounds/playground-azure> and click `START LAB` to request a new Azure Playground instance. After a few seconds, you will receive your temporary Azure portal account like this:
 
 ![image](../../images/01-sign-in.png)
 
@@ -18,6 +18,3 @@ Copy the **Console Link** by pressing the copy button to the right of it, paste 
 Skip all the usage and Start a Tour stuff, unless you're interested in that.
 
 Next: [Open a Cloud Shell](./02-cloudshell.md)
-
-
-

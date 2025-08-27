@@ -1,6 +1,6 @@
 # Ingress Annotations and rewrite-target
 
-  - Take me to [Lecture](https://kodekloud.com/topic/ingress-annotations-and-rewrite-target/)
+- Take me to [Lecture](https://kodekloud.com/topic/ingress-annotations-and-rewrite-target/)
 
 In this section, we will take a look at **Ingress annotations and rewrite-target**
 
@@ -27,11 +27,9 @@ spec:
 
 ```
 
-
-
 #### Reference Docs
 
-- https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/
-- https://kubernetes.github.io/ingress-nginx/examples/
-- https://kubernetes.github.io/ingress-nginx/examples/rewrite/
-- https://github.com/kubernetes/ingress-nginx/blob/master/docs/troubleshooting.md
+- <https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/>
+- <https://kubernetes.github.io/ingress-nginx/examples/>
+- <https://kubernetes.github.io/ingress-nginx/examples/rewrite/>
+- <https://github.com/kubernetes/ingress-nginx/blob/master/docs/troubleshooting.md>

@@ -62,4 +62,3 @@ Now we will add some *unmanaged* nodes to the cluster. AWS Playground does not s
 
 Prev: [Create Cluster](./05-create-cluster.md)<br/>
 Next: [Join Worker Nodes](./07-join-nodes.md)
-

@@ -1,17 +1,19 @@
 # Practice Test - Backup and Restore Methods
+
 Take me to [Practice Test](https://kodekloud.com/topic/practice-test-backup-and-restore-methods/)
 
 Solutions to practice test - Backup and Restore Methods
 
-1.  <details>
+1. <details>
     <summary>How many deployments exist in the cluster?</summary>
 
     ```
     kubectl get deployments
     ```
+
     </details>
 
-1.  <details>
+1. <details>
     <summary>What is the version of ETCD running on the cluster?</summary>
 
     ```
@@ -21,7 +23,7 @@ Solutions to practice test - Backup and Restore Methods
     Find the entry for `Image`
     </details>
 
-1.  <details>
+1. <details>
     <summary>At what address can you reach the ETCD cluster from the controlplane node?</summary>
 
     ```
@@ -31,7 +33,7 @@ Solutions to practice test - Backup and Restore Methods
     Under `Command` find `--listen-client-urls`
     </details>
 
-1.  <details>
+1. <details>
     <summary>Where is the ETCD server certificate file located?</summary>
 
     On kubeadm clusters like this one, the default location for certificate files is `/etc/kubernetes/pki/etcd`
@@ -39,7 +41,7 @@ Solutions to practice test - Backup and Restore Methods
     Choose the correct certificate
     </details>
 
-1.  <details>
+1. <details>
     <summary>Where is the ETCD CA Certificate file located?</summary>
 
     On kubeadm clusters like this one, the default location for certificate files is `/etc/kubernetes/pki/etcd`
@@ -47,7 +49,7 @@ Solutions to practice test - Backup and Restore Methods
     Choose the correct certificate
     </details>
 
-1.  <details>
+1. <details>
     <summary>Take a snapshot of the ETCD database using the built-in snapshot functionality.</br>Store the backup file at location <b>/opt/snapshot-pre-boot.db</b></summary>
 
     ```
@@ -57,18 +59,18 @@ Solutions to practice test - Backup and Restore Methods
       --key=/etc/kubernetes/pki/etcd/server.key \
       /opt/snapshot-pre-boot.db
     ```
-    </details> 
+
+    </details>
 
 1. Information only.
 
-
-1.  <details>
+1. <details>
     <summary>Wake up! We have a conference call! After the reboot the master nodes came back online, but none of our applications are accessible. Check the status of the applications on the cluster. What's wrong?</summary>
 
     > All of the above
     </details>
 
-1.  <details>
+1. <details>
     <summary>Luckily we took a backup. Restore the original state of the cluster using the backup file.</summary>
 
     1. Restore the backup to a new directory
@@ -109,6 +111,7 @@ Solutions to practice test - Backup and Restore Methods
         kubectl get deployments
         kubectl get services
         ```
+
     </details>
 
-See also: https://github.com/kodekloudhub/community-faq/blob/main/docs/etcd-faq.md
+See also: <https://github.com/kodekloudhub/community-faq/blob/main/docs/etcd-faq.md>

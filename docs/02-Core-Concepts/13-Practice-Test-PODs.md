@@ -1,7 +1,9 @@
 # Practice Test - PODs
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-pods/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-pods/)
 
 ## Here are the solutions to the practice test
+
 1. <details>
    <summary>How many pods exist on the system?</summary>
 
@@ -19,6 +21,7 @@
    ```bash
    kubectl run nginx --image=nginx
    ```
+
    </details>
 
 1. <details>
@@ -36,8 +39,8 @@
    kubectl get pods --no-headers | wc -l
    ```
 
-   * `--no-headers` should be obvious - output only the details.
-   * `wc` is the word count program. `-l` tells it to count lines instead, and it will count the lines emitted by `kubectl`
+   - `--no-headers` should be obvious - output only the details.
+   - `wc` is the word count program. `-l` tells it to count lines instead, and it will count the lines emitted by `kubectl`
    </details>
 
 1. <details>

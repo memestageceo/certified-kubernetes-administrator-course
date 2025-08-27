@@ -1,9 +1,10 @@
 # DaemonSets
-  - Take me to [Video Tutorial](https://kodekloud.com/topic/daemonsets/)
+
+- Take me to [Video Tutorial](https://kodekloud.com/topic/daemonsets/)
 
 In this section, we will take a look at DaemonSets.
 
-#### DaemonSets are like replicasets, as it helps in to deploy multiple instances of pod. But it runs one copy of your pod on each node in your cluster.
+#### DaemonSets are like replicasets, as it helps in to deploy multiple instances of pod. But it runs one copy of your pod on each node in your cluster
   
   ![ds](../../images/ds.PNG)
   
@@ -16,8 +17,10 @@ In this section, we will take a look at DaemonSets.
   ![ds-ucn](../../images/ds-ucn.PNG)
   
 ## DaemonSets - Definition
+
 - Creating a DaemonSet is similar to the ReplicaSet creation process.
-- For DaemonSets, we start with apiVersion, kind as **`DaemonSets`** instead of **`ReplicaSet`**, metadata and spec. 
+- For DaemonSets, we start with apiVersion, kind as **`DaemonSets`** instead of **`ReplicaSet`**, metadata and spec.
+
   ```
   apiVersion: apps/v1
   kind: Replicaset
@@ -59,22 +62,29 @@ In this section, we will take a look at DaemonSets.
         - name: monitoring-agent
           image: monitoring-agent
   ```
+
   ![dsd](../../images/dsd.PNG)
   
 - To create a daemonset from a definition file
+
   ```
-  $ kubectl create -f daemon-set-definition.yaml
+  kubectl create -f daemon-set-definition.yaml
   ```
 
 ## View DaemonSets
+
 - To list daemonsets
+
   ```
-  $ kubectl get daemonsets
+  kubectl get daemonsets
   ```
+
 - For more details of the daemonsets
+
   ```
-  $ kubectl describe daemonsets monitoring-daemon
+  kubectl describe daemonsets monitoring-daemon
   ```
+
   ![ds1](../../images/ds1.PNG)
   
 ## How DaemonSets Works
@@ -82,4 +92,5 @@ In this section, we will take a look at DaemonSets.
   ![ds2](../../images/ds2.PNG)
 
 #### K8s Reference Docs
-- https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/#writing-a-daemonset-spec
+
+- <https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/#writing-a-daemonset-spec>

@@ -8,6 +8,7 @@ Now that CloudFormation has created the EC2 instances for the worker nodes, we n
     ```
     curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/aws-auth-cm.yaml
     ```
+
 1. Now edit it in `vi`
 
     ```
@@ -47,4 +48,3 @@ Congratulations! Your cluster is now up and you can create resources.
 
 Prev: [Add Cluster Nodes](./06-nodes.md)<br/>
 Next: [Accessing Node Port services](./08-node-port.md)
-

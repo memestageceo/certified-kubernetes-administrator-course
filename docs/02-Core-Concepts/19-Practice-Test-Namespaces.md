@@ -1,5 +1,6 @@
 # Practice Test - Namespaces
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-namespaces/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-namespaces/)
 
 Solutions to practice test for namespaces
 
@@ -29,6 +30,7 @@ Solutions to practice test for namespaces
    ```
    kubectl run redis --image=redis --namespace=finance
    ```
+
    </details>
 
 1. <details>
@@ -57,6 +59,7 @@ Solutions to practice test for namespaces
    Host Name: db-service
    Host Port: 6379
    ```
+
    </details>
 
 1. <details>
@@ -80,4 +83,3 @@ Solutions to practice test for namespaces
    > db-service.dev
 
    </details>
-

@@ -1,7 +1,9 @@
 # Practice Test - Cluster Upgrade Process
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cluster-upgrade-process/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-cluster-upgrade-process/)
   
 Solutions to practice test cluster upgrade process
+
 - What is the current version of the cluster?
   
   <details>
@@ -71,7 +73,7 @@ Solutions to practice test cluster upgrade process
   <details>
   ```
   $ apt install kubeadm=1.18.0-00
-  $ kubeadm upgrade apply v1.18.0 
+  $ kubeadm upgrade apply v1.18.0
   $ apt install kubelet=1.18.0-00
   ```
   </details>
@@ -80,7 +82,7 @@ Solutions to practice test cluster upgrade process
   
   <details>
   ```
-  $ kubectl uncordon master 
+  $ kubectl uncordon master
   ```
   </details>
   
@@ -109,4 +111,3 @@ Solutions to practice test cluster upgrade process
   $ kubectl uncordon node01
   ```
   </details>
-

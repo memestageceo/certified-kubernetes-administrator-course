@@ -1,13 +1,15 @@
 # Practice Test Env Variables
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-env-variables/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-env-variables/)
   
 Solutions to practice test env variables
+
 - Run the command 'kubectl get pods' and count the number of pods.
   
   <details>
   
   ```
-  $ kubectl get pods
+  kubectl get pods
   ```
   
   </details>
@@ -17,7 +19,7 @@ Solutions to practice test env variables
   <details>
   
   ```
-  $ kubectl describe pod
+  kubectl describe pod
   ```
   
   </details>
@@ -27,11 +29,11 @@ Solutions to practice test env variables
   <details>
   
   ```
-  $ kubectl describe pod
+  kubectl describe pod
   ```
   
   </details>
-    
+
 - View the web application UI by clicking on the 'Webapp Color' Tab above your terminal.
 
 - Set the environment option to APP_COLOR - green.
@@ -54,7 +56,7 @@ Solutions to practice test env variables
   <details>
   
   ```
-  $ kubectl get configmaps
+  kubectl get configmaps
   ```
   
   </details>
@@ -64,7 +66,7 @@ Solutions to practice test env variables
   <details>
   
   ```
-  $ kubectl describe configmaps
+  kubectl describe configmaps
   ```
   
   </details>
@@ -74,7 +76,7 @@ Solutions to practice test env variables
   <details>
   
   ```
-  $ kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
+  kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
   ```
   
   </details>
@@ -97,8 +99,8 @@ Solutions to practice test env variables
   <details>
   
   ```
-  $ kubectl create -f new-webapp.yaml
-  ``` 
+  kubectl create -f new-webapp.yaml
+  ```
   
   </details>
 

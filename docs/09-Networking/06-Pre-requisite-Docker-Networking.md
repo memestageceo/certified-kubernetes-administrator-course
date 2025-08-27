@@ -1,6 +1,6 @@
 # Pre-requisite Docker Networking
 
-  - Take me to [Lecture](https://kodekloud.com/topic/prerequsite-docker-networking/)
+- Take me to [Lecture](https://kodekloud.com/topic/prerequsite-docker-networking/)
 
 In this section, we will take a look at **Docker Networking**
 
@@ -9,7 +9,7 @@ In this section, we will take a look at **Docker Networking**
 - Running docker container with `none` network
 
 ```
-$ docker run --network none nginx
+docker run --network none nginx
 ```
 
 ## Host Network
@@ -17,7 +17,7 @@ $ docker run --network none nginx
 - Running docker container with `host` network
 
 ```
-$ docker run --network host nginx
+docker run --network host nginx
 ```
 
 ## Bridge Network
@@ -25,7 +25,7 @@ $ docker run --network host nginx
 - Running docker container with `bridge` network
 
 ```
-$ docker run --network bridge nginx
+docker run --network bridge nginx
 ```
 
 ## List the Docker Network
@@ -52,7 +52,7 @@ $ ip link show docker0
 - With the help of `ip link add` command to type set `bridge` to `docker0`
 
 ```
-$ ip link add docker0 type bridge
+ip link add docker0 type bridge
 ```
 
 ## To view the IP Addr of the interface docker0
@@ -70,7 +70,7 @@ $ ip addr show docker0
 ## Run the command to create a Docker Container
 
 ```
-$ docker run nginx
+docker run nginx
 ```
 
 ## To list the Network Namespace
@@ -156,6 +156,7 @@ $ docker inspect nginx | grep -w -A5 Ports
                     }
 
 ```
+
 - To view the IP Addr of the host system
 
 ```
@@ -191,14 +192,11 @@ $ iptables \
 ## List the Iptables rules
 
 ```
-$ iptables -nvL -t nat
+iptables -nvL -t nat
 ```
-
-
-
 
 #### References docs
 
-- https://docs.docker.com/network/
-- https://linux.die.net/man/8/iptables
-- https://linux.die.net/man/8/ip
+- <https://docs.docker.com/network/>
+- <https://linux.die.net/man/8/iptables>
+- <https://linux.die.net/man/8/ip>

@@ -2,7 +2,7 @@
 
 Here we will join the worker nodes to the cluster. You will need the `kubeadm join` command from the previous step
 
-Ref: https://stackoverflow.com/questions/59629319/unable-to-upgrade-connection-pod-does-not-exist
+Ref: <https://stackoverflow.com/questions/59629319/unable-to-upgrade-connection-pod-does-not-exist>
 
 ## Join Workers
 
@@ -17,13 +17,13 @@ kubeadm token create --print-join-command
 
 On each of `node01` and `node02` do the following
 
-1.  Become root (if you are not already)
+1. Become root (if you are not already)
 
     ```
     sudo -i
     ```
 
-1.  Join the node
+1. Join the node
 
     > Paste the `kubeadm join` command output by `kubeadm init` on the control plane
 
@@ -37,7 +37,5 @@ kubectl get nodes
 
 [Kubernetes Documentation Link](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-linux-nodes/)
 
-
 Next: [Test](./07-test.md)</br>
 Prev: [Boot controlplane](./05-controlplane.md)
-

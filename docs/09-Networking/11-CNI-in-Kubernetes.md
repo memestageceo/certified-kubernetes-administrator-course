@@ -1,6 +1,6 @@
 # CNI in Kubernetes
 
-  - Take me to [Lecture](https://kodekloud.com/topic/cni-in-kubernetes/)
+- Take me to [Lecture](https://kodekloud.com/topic/cni-in-kubernetes/)
 
 In this section, we will take a look at **Container Networking Interface (CNI) in Kubernetes**
 
@@ -8,25 +8,24 @@ In this section, we will take a look at **Container Networking Interface (CNI) i
 
 ![net-1](../../images/net1.PNG)
 
-
 - Check the status of the Kubelet Service
 
 ```
-$ systemctl status kubelet.service
+systemctl status kubelet.service
 ```
 
 ## View Kubelet Options
 
 ```
-$ ps -aux | grep kubelet
+ps -aux | grep kubelet
 ```
 
-## Check the Supportable Plugins 
+## Check the Supportable Plugins
 
 - To check the all supportable plugins available in the `/opt/cni/bin` directory.
 
 ```
-$ ls /opt/cni/bin
+ls /opt/cni/bin
 
 ```
 
@@ -43,8 +42,7 @@ ls /etc/cni/net.d
 
 ![net-2](../../images/net2.PNG)
 
-
 #### References Docs
 
-- https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
-- https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
+- <https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/>
+- <https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/>

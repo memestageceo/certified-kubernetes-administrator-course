@@ -1,10 +1,13 @@
 # Node Affinity
-  - Take me to the [Video Tutorial](https://kodekloud.com/topic/node-affinity-2/)
+
+- Take me to the [Video Tutorial](https://kodekloud.com/topic/node-affinity-2/)
   
 In this section, we will talk about "Node Affinity" feature in kubernetes.
 
-#### The primary feature of Node Affinity is to ensure that the pods are hosted on particular nodes.
+#### The primary feature of Node Affinity is to ensure that the pods are hosted on particular nodes
+
 - With **`Node Selectors`** we cannot provide the advance expressions.
+
   ```
   apiVersion: v1
   kind: Pod
@@ -17,7 +20,9 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
    nodeSelector:
     size: Large
   ```
+
   ![ns-old](../../images/ns-old.PNG)
+
   ```
   apiVersion: v1
   kind: Pod
@@ -38,6 +43,7 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
               - Large
               - Medium
   ```
+
   ![na](../../images/na.PNG)
   
   ```
@@ -59,6 +65,7 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
               values: 
               - Small
   ```
+
   ![na1](../../images/na1.PNG)
   
   ```
@@ -81,8 +88,8 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
   
   ![na2](../../images/na2.PNG)
   
-
 ## Node Affinity Types
+
 - Available
   - requiredDuringSchedulingIgnoredDuringExecution
   - preferredDuringSchedulingIgnoredDuringExecution
@@ -99,5 +106,6 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
   ![nats1](../../images/nats1.PNG)
   
 #### K8s Reference Docs
-- https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/
-- https://kubernetes.io/blog/2017/03/advanced-scheduling-in-kubernetes/
+
+- <https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/>
+- <https://kubernetes.io/blog/2017/03/advanced-scheduling-in-kubernetes/>

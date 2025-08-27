@@ -1,14 +1,17 @@
 # Practice Test - DaemonSets
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-daemonsets/)
+
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-daemonsets/)
   
 Solutions to practice test daemonsets
+
 - Run the command kubectl get daemonsets --all-namespaces
   
   <details>
 
   ```
-  $ kubectl get daemonsets --all-namespaces
+  kubectl get daemonsets --all-namespaces
   ```
+
   </details>
 
 - Run the command kubectl get daemonsets --all-namespaces
@@ -16,8 +19,9 @@ Solutions to practice test daemonsets
   <details>
 
   ```
-  $ kubectl get daemonsets --all-namespaces
+  kubectl get daemonsets --all-namespaces
   ```
+
   </details>
 
 - Run the command kubectl get all --all-namespaces and identify the types
@@ -25,8 +29,9 @@ Solutions to practice test daemonsets
   <details>
 
   ```
-  $ kubectl get all --all-namespaces
+  kubectl get all --all-namespaces
   ```
+
   </details>
 
 - Run the command kubectl describe daemonset kube-proxy --namespace=kube-system
@@ -34,8 +39,9 @@ Solutions to practice test daemonsets
   <details>
 
   ```
-  $ kubectl describe daemonset kube-proxy --namespace=kube-system
+  kubectl describe daemonset kube-proxy --namespace=kube-system
   ```
+
   </details>
 
 - Run the command kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
@@ -43,16 +49,17 @@ Solutions to practice test daemonsets
   <details>
 
   ```
-  $ kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
+  kubectl describe daemonset kube-flannel-ds-amd64 --namespace=kube-system
   ```
+
   </details>
-    
+
 - Create a daemonset
 
   <details>
 
   ```
-  $ vi ds.yaml
+  vi ds.yaml
   ```
 
   ```
@@ -81,6 +88,7 @@ Solutions to practice test daemonsets
         - name: elasticsearch
           image: k8s.gcr.io/fluentd-elasticsearch:1.20
   ```
+
   </details>
 
 - To create the daemonset and list the daemonsets and pods
@@ -88,12 +96,9 @@ Solutions to practice test daemonsets
   <details>
 
   ```
-  $ kubectl create -f ds.yaml
-  $ kubectl get ds -n kube-system
-  $ kubectl get pod -n kube-system|grep elasticsearch
+  kubectl create -f ds.yaml
+  kubectl get ds -n kube-system
+  kubectl get pod -n kube-system|grep elasticsearch
   ```
+
   </details>
-
-
-
-

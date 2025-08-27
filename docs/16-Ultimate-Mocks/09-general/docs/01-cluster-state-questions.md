@@ -13,6 +13,7 @@ This type of question is about cluster state, and the state of the cluster chang
 Store the `pod names` and their `ip addresses` from all namespaces at `/root/pod_ips_ckad02_svcn` where the output is sorted by their IPs.
 
 Please ensure the format as shown below:
+
 ```
 POD_NAME        IP_ADDR
 pod-1           ip-1
@@ -20,6 +21,7 @@ pod-3           ip-2
 pod-2           ip-3
 ...
 ```
+
 ---
 From the required output, this clearly requires Custom Columns
 
@@ -31,18 +33,19 @@ From the required output, this clearly requires Custom Columns
     kubectl --context=cluster3 get pods -A -o custom-columns="POD_NAME:.metadata.name,IP_ADDR:.status.podIP" --sort-by=".status.podIP"
     ```
 
-1.  Adjust this to write to the output file and check the output
+1. Adjust this to write to the output file and check the output
 
     ```
     kubectl --context=cluster3 get pods -A -o custom-columns="POD_NAME:.metadata.name,IP_ADDR:.status.podIP" --sort-by=".status.podIP" > /root/pod_ips_ckad02_svcn
     ```
 
     Check it
+
     ```bash
     cat /root/pod_ips_ckad02_svcn
     ```
 
-1.  Now use `vi` to create a file `run-at-end.sh`
+1. Now use `vi` to create a file `run-at-end.sh`
 
     ```
     vi run-at-end.sh
@@ -50,7 +53,7 @@ From the required output, this clearly requires Custom Columns
 
     Paste the entire kubectl command from above (step 2) into this file. If you have already created this script for a previous similar question, then simply add this line to the file, so the script will answer all such questions when you run it.
 
-1.  Test it
+1. Test it
 
     ```
     rm -f /root/pod_ips_ckad02_svcn
@@ -60,7 +63,7 @@ From the required output, this clearly requires Custom Columns
 
     The output should be the same
 
-1.  Finally when you are finished and before pressing `End Exam`, re-run your script
+1. Finally when you are finished and before pressing `End Exam`, re-run your script
 
     ```
     source run-at-end.sh
@@ -85,7 +88,7 @@ Use a similar approach whether the stat is CPU or memory, or the resource is Pod
         kubectl config get-contexts -o name
         ```
 
-    1.  Examine the pod usage on each cluster. Run this command with each value for `--context`
+    1. Examine the pod usage on each cluster. Run this command with each value for `--context`
 
         ```
         kubectl --context=cluster1 top pods -A --sort-by=cpu
@@ -107,9 +110,9 @@ Use a similar approach whether the stat is CPU or memory, or the resource is Pod
     There is a lot going on here, isn't there?
 
     As a working DevOps engineer, this is the sort of thing you would be expected to be able to come up with in your day-to-day job - indeed the lab engineer who developed the marking script for this lab would have to use something like the above! Hence it is important to know how to *use* Linux as well as Kubernetes to be successful in a Kubernetes job. You don't need to know it to Sys Admin level (e.g RHCSA, LFCS).<br/>The following courses are recommended:
-    * [Linux Basics](https://kodekloud.com/courses/the-linux-basics-course/)
-    * [Shell Scripts for Beginners](https://kodekloud.com/courses/shell-scripts-for-beginners/)
-    * [Advanced Bash Scripting](https://kodekloud.com/courses/advanced-bash-scripting/)
+  * [Linux Basics](https://kodekloud.com/courses/the-linux-basics-course/)
+  * [Shell Scripts for Beginners](https://kodekloud.com/courses/shell-scripts-for-beginners/)
+  * [Advanced Bash Scripting](https://kodekloud.com/courses/advanced-bash-scripting/)
 
     So, what is actually going on?
 
@@ -119,20 +122,25 @@ Use a similar approach whether the stat is CPU or memory, or the resource is Pod
         1. `--sort-by=cpu` ensures the pod we need from this cluster is the first pod listed. In `kubectl top`, sort order is descending.
         1. Then we pipe the output to `head -1` to get only the first line of results (the top pod for this cluster).
         1. Then we pipe it to `awk` to format the output close to what we need, passing in the cluster name so we can include it in the output. The output will look like this
+
             ```
             cluster1,default,frontend-stable-cka05-arch,396m
             ```
+
     1. After `done` there will be one line like above for each of the clusters. It would look like this, and note they are in cluster order, not CPU usage order:
+
         ```text
         cluster1,default,frontend-stable-cka05-arch,396m
         cluster2,kube-system,kube-apiserver-cluster2-controlplane,43m
         cluster3,kube-system,metrics-server-7b67f64457-9cqrd,5m
         cluster4,kube-system,kube-apiserver-cluster4-controlplane,32m
         ```
+
     1. Pipe to `sort` so we get the highest CPU pod *across all clusters* to the end of the list. `sort` works in ascending order.
         1. `-t ','` sets the field separator to be comma.
         1. `-k4` means sort by the fourth field (the one containing the CPU value).
         1. `-h` means "human" sort, taking into account any SI unit (i.e. the `m` for milli-cpu`). The output will now look like this:
+
             ```text
             cluster3,kube-system,metrics-server-7b67f64457-9cqrd,5m
             cluster4,kube-system,kube-apiserver-cluster4-controlplane,32m
@@ -141,11 +149,15 @@ Use a similar approach whether the stat is CPU or memory, or the resource is Pod
             ```
 
     1. Pipe to `tail -1` to get the last entry in the sorted list which is the one we need, which will yield
+
         ```
         cluster1,default,frontend-stable-cka05-arch,396m
         ```
+
     1. Finally pipe to `sed` to remove the CPU value and only output the first 3 fields as required by the question. The `sed` expression matches comma, followed by one or more digits, followed by zero or more letters, followed by end of line using extended regex (`-E`) and replaces it with an empty string, thus deleting the matched text. This yields the required output:
+
         ```
         cluster1,default,frontend-stable-cka05-arch
         ```
+
         Then redirect the output to the requested file.

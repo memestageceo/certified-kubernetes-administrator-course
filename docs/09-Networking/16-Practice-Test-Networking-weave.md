@@ -1,8 +1,8 @@
 # Practice Test Networking Weave
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-networking-weave/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-networking-weave/)
 
-#### Solution 
+#### Solution
 
   1. <details>
       <summary>How many Nodes are part of this cluster?</summary>
@@ -21,11 +21,13 @@
       Two ways to do this:
 
       1.
+
          ```bash
          kubectl get pods -n kube-system
          ```
 
       1.
+
          ```bash
          ls -l /opt/cni/bin
          ```

@@ -1,13 +1,13 @@
 # Solution Worker Node Failure
 
-  - Lets have a look at the [Practice Test](https://kodekloud.com/topic/practice-test-worker-node-failure/) of the Worker Node Failure
+- Lets have a look at the [Practice Test](https://kodekloud.com/topic/practice-test-worker-node-failure/) of the Worker Node Failure
 
-   ### Solution
+### Solution
 
    1. <details>
       <summary>Fix the broken cluster</summary>
 
-      * Fix `node01`
+      - Fix `node01`
 
       1. Check the nodes
 
@@ -64,7 +64,7 @@
    2. <details>
       <summary>The cluster is broken again. Investigate and fix the issue.</summary>
 
-      * Fix cluster
+      - Fix cluster
 
       1. Check the nodes
 
@@ -102,7 +102,7 @@
 
          If kubelet cannot load its certificates, then it cannot autheticate with API server. This is a fatal error, so kubelet exits.
 
-      1.  Check the indicated directory for certificates
+      1. Check the indicated directory for certificates
 
             ```bash
             ls -l /etc/kubernetes/pki
@@ -180,7 +180,7 @@
    3. <details>
       <summary>The cluster is broken again. Investigate and fix the issue.</summary>
 
-      * Fix cluster
+      - Fix cluster
 
       1. Check the nodes
 

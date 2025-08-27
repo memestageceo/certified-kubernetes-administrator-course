@@ -10,31 +10,36 @@ Install the following if you don't aloready have it.
 
 * [terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli#install-terraform)
 * `kubectl`
-   - [macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macOS/)
-   - [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
-   - [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
+  * [macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macOS/)
+  * [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+  * [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 * `azure-cli`
-    * [macOS](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos?view=azure-cli-latest)
-    * [Linux](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?view=azure-cli-latest)
-    * Windows
+  * [macOS](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos?view=azure-cli-latest)
+  * [Linux](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?view=azure-cli-latest)
+  * Windows
+
         ```
         choco install -y azure-cli
         ```
-
 
 # Verify the installations
 
 Open a new shell and verify that each of the above is correctly installed:
 
 1. To verify Terraform, open powershell and type
+
     ```
     terraform version
     ```
+
 1. To verify kubectl version, open powershell and type
+
     ```
     kubectl version --client
     ```
+
 1. To verify Azure CLI version, open powershell and type
+
     ```
     az version
     ```
@@ -44,7 +49,6 @@ Open a new shell and verify that each of the above is correctly installed:
     ```
     "C:\Program Files\Microsoft SDKs\Azure\CLI2\python.exe" -m pip install pywin32 --force-reinstall
     ```
-
 
 # Clone the repository
 

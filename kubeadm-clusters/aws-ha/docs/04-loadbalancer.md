@@ -4,7 +4,7 @@ Now we will install the load balancer that serves as the endpoint for connecting
 
 First, be logged into `student-node` as directed above.
 
-1.  Log into the load balancer
+1. Log into the load balancer
 
     ```
     ssh loadbalancer
@@ -23,7 +23,7 @@ First, be logged into `student-node` as directed above.
     apt-get install -y haproxy
     ```
 
-1.  Using the [dig](https://linux.die.net/man/1/dig) command which is an alternative to `nslookup` and better for scripting with, we can get the *private* IP addresses of the loadbalancer and 3 control planes.
+1. Using the [dig](https://linux.die.net/man/1/dig) command which is an alternative to `nslookup` and better for scripting with, we can get the *private* IP addresses of the loadbalancer and 3 control planes.
 
     ```bash
     dig +short loadbalancer
@@ -38,7 +38,7 @@ First, be logged into `student-node` as directed above.
     1. Private IP - This is the IP on the AWS subnet where the instance is launched, and is used for EC2 instances to talk to each other.
     1. Public IP - Not always assigned, but is the IP used to reach the EC2 instances from the outside world (i.e. your browser). We will see this later in the testing section.
 
-1.  Create the HAProxy configuration file
+1. Create the HAProxy configuration file
 
     ```bash
     cat <<EOF > /etc/haproxy/haproxy.cfg
@@ -58,7 +58,7 @@ First, be logged into `student-node` as directed above.
     EOF
     ```
 
-1.  Restart and check haproxy
+1. Restart and check haproxy
 
     ```bash
     systemctl restart haproxy
@@ -67,7 +67,7 @@ First, be logged into `student-node` as directed above.
 
     It should be warning us that no backend is available - which is true because we haven't installed Kubernetes yet!
 
-1.  Exit from `sudo` and then back to `student-node`
+1. Exit from `sudo` and then back to `student-node`
 
     ```bash
     exit

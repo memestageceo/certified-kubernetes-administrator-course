@@ -1,10 +1,10 @@
 # Pre-requisite DNS
 
-  - Take me to [Lecture](https://kodekloud.com/topic/prerequsite-dns/)
+- Take me to [Lecture](https://kodekloud.com/topic/prerequsite-dns/)
 
 In this section, we will take a look at **DNS in the Linux**
 
-## Name Resolution 
+## Name Resolution
 
 - With help of the `ping` command. Checking the reachability of the IP Addr on the Network.
 
@@ -15,6 +15,7 @@ PING 172.17.0.64 (172.17.0.64) 56(84) bytes of data.
 64 bytes from 172.17.0.64: icmp_seq=2 ttl=64 time=0.415 ms
 
 ```
+
 - Checking with their hostname
 
 ```
@@ -22,6 +23,7 @@ $ ping web
 ping: unknown host web
 
 ```
+
 - Adding entry in the `/etc/hosts` file to resolve by their hostname.
 
 ```
@@ -31,6 +33,7 @@ $ cat >> /etc/hosts
 
 # Ctrl + c to exit
 ```
+
 - It will look into the `/etc/hosts` file.
 
 ```
@@ -79,7 +82,8 @@ $ cat /etc/resolv.conf
 nameserver   127.0.0.53
 nameserver   8.8.8.8
 options edns0
-``` 
+```
+
 ```
 $ ping www.github.com
 PING github.com (140.82.121.3) 56(84) bytes of data.
@@ -104,7 +108,7 @@ PING github.com (140.82.121.3) 56(84) bytes of data.
 
 - Useful networking tools to test dns name resolution.
 
-#### nslookup 
+#### nslookup
 
 ```
 $ nslookup www.google.com

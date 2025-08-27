@@ -1,6 +1,6 @@
 # Practice Test - Explore Env
 
-  - Take me to [Practice Test](https://kodekloud.com/topic/practice-test-explore-environment/)
+- Take me to [Practice Test](https://kodekloud.com/topic/practice-test-explore-environment/)
 
 #### Solution
 
@@ -124,9 +124,9 @@
 
    Know that
 
-   * Any interface with name beginning `eth` is a "physical" interface, and represents a network card attached to the host.
-   * Interface `lo` is the loopback, and covers all IP addresses starting with `127`. Every computer has this.
-   * Any interface with name beginning `veth` is a virtual network interface used for tunnelling between the host and the pod network. These connect with bridges, and the bridge interface name is listed with their details.
+   - Any interface with name beginning `eth` is a "physical" interface, and represents a network card attached to the host.
+   - Interface `lo` is the loopback, and covers all IP addresses starting with `127`. Every computer has this.
+   - Any interface with name beginning `veth` is a virtual network interface used for tunnelling between the host and the pod network. These connect with bridges, and the bridge interface name is listed with their details.
 
    We can see that for the two `veth` devices, they are associated with another device in the list `cni0`, therefore that is the answer.
 
@@ -168,10 +168,10 @@
    <details>
    <summary>What the netstat options used mean</summary>
 
-   * `-n` - Show IP addresses (don't try to resolve to host names)
-   * `-p` - Show the process names (e.g. `kube-scheduler`)
-   * `-l` - Include only _listening_ sockets
-   * `-t` - Include only TCP sockets
+   - `-n` - Show IP addresses (don't try to resolve to host names)
+   - `-p` - Show the process names (e.g. `kube-scheduler`)
+   - `-l` - Include only _listening_ sockets
+   - `-t` - Include only TCP sockets
 
    </details>
 
@@ -196,9 +196,9 @@
    <details>
    <summary>What the netstat options used mean</summary>
 
-   * `-a` - Include sockets in all states
-   * `-n` - Show IP addresses (don't try to resolve to host names)
-   * `-p` - Show the process names (e.g. `etcd`)
+   - `-a` - Include sockets in all states
+   - `-n` - Show IP addresses (don't try to resolve to host names)
+   - `-p` - Show the process names (e.g. `etcd`)
 
    </details>
 
@@ -211,6 +211,3 @@
    That's because `2379` is the port of ETCD to which API server connects to There are multiple concurrent connections so that API server can process multiple etcd operations simultaneously.
 
     `2380` is only for etcd peer-to-peer connectivity when you have multiple controlplane nodes. In this case we don't.
-
-
-

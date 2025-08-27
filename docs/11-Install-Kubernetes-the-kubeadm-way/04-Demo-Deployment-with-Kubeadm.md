@@ -30,8 +30,8 @@ Docker is no longer supported as a container driver. Instead we will install the
 
     <details>
 
-    * VirtualBox: https://www.virtualbox.org/
-    * Vagrant: https://developer.hashicorp.com/vagrant/downloads
+    - VirtualBox: <https://www.virtualbox.org/>
+    - Vagrant: <https://developer.hashicorp.com/vagrant/downloads>
 
     </details>
 
@@ -56,9 +56,9 @@ Docker is no longer supported as a container driver. Instead we will install the
 
     This will start 3 virtual machines named
 
-    * `kubemaster` - where we will install the control plane
-    * `kubenode01`
-    * `kubenode02`
+    - `kubemaster` - where we will install the control plane
+    - `kubenode01`
+    - `kubenode02`
 
     </details>
 
@@ -106,7 +106,7 @@ Docker is no longer supported as a container driver. Instead we will install the
             }
             ```
 
-    1. Install `containerd` container driver and associated tooling
+      1. Install `containerd` container driver and associated tooling
 
         <details>
 
@@ -126,7 +126,7 @@ Docker is no longer supported as a container driver. Instead we will install the
         }
         ```
 
-    1. Install Kubernetes software
+      1. Install Kubernetes software
 
         <details>
         This will install the latest version
@@ -151,7 +151,7 @@ Docker is no longer supported as a container driver. Instead we will install the
 
         </details>
 
-  1. Initialize controlplane node
+1. Initialize controlplane node
 
      <details>
 
@@ -165,7 +165,7 @@ Docker is no longer supported as a container driver. Instead we will install the
 
          > 192.168.56.11
 
-      1. Create a config file for `kubeadm` to get settings from 
+      1. Create a config file for `kubeadm` to get settings from
 
           ```yaml
           kind: ClusterConfiguration
@@ -223,6 +223,6 @@ Docker is no longer supported as a container driver. Instead we will install the
 
     The following steps must be performed on both worker nodes, so `ssh` to `kubenode01` and run the steps, then to `kubenode02`
 
-    * Paste the `kubeadm join` command from above step to the command prompt and enter it.
+    - Paste the `kubeadm join` command from above step to the command prompt and enter it.
 
     </details>
