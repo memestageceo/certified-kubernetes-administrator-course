@@ -1,0 +1,85 @@
+Front,Back
+"Create a Role named 'developer' that allows list, get, create, update, and delete operations on pods","apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: developer
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["list", "get", "create", "update", "delete"]"
+"Create a ServiceAccount named 'my-scheduler' in the kube-system namespace","apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: my-scheduler
+  namespace: kube-system"
+"Create a ClusterRoleBinding named 'my-scheduler-as-kube-scheduler' that binds the ServiceAccount 'my-scheduler' to the ClusterRole 'system:kube-scheduler'","apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: my-scheduler-as-kube-scheduler
+subjects:
+  - kind: ServiceAccount
+    name: my-scheduler
+    namespace: kube-system
+roleRef:
+  kind: ClusterRole
+  name: system:kube-scheduler
+  apiGroup: rbac.authorization.k8s.io"
+"What flag is used to enable admission controllers in kube-apiserver?","--enable-admission-plugins"
+"Command to check available admission plugins in kube-apiserver","kube-apiserver -h | grep enable-admission-plugins"
+"How to enable NodeRestriction and NamespaceAutoProvision admission controllers?","--enable-admission-plugins=NodeRestriction,NamespaceAutoProvision"
+"How to disable the DefaultStorageClass admission controller?","--disable-admission-plugins=DefaultStorageClass"
+"Command to check admission plugins on a running kube-apiserver pod in controlplane","kubectl exec -it kube-apiserver-controlplane -n kube-system -- kube-apiserver -h | grep 'enable-admission-plugins'"
+"What are the three main phases of Kubernetes request processing after authentication?","1. Authentication 2. RBAC Authorization 3. Admission Controllers"
+"Create a pod that uses a custom scheduler named 'my-custom-scheduler'","apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+  schedulerName: my-custom-scheduler"
+"What field is used to specify a custom scheduler for a pod?","schedulerName"
+"Command to get service accounts in current namespace","kubectl get sa"
+"Command to get service account named 'my-scheduler'","kubectl get sa my-scheduler"
+"What are the key components of an RBAC Role definition?","apiGroups, resources, verbs"
+"List three built-in admission controllers mentioned in the notes","AlwaysPullImages, DefaultStorageClass, EventRateLimit, NamespaceExists"
+"What is the purpose of admission controllers in Kubernetes?","Admission Controllers validate, mutate and auto-provision resources and provide extra layer of security"
+"Create a ClusterRole that allows creating leases in coordination.k8s.io apiGroup","apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: system:kube-scheduler
+rules:
+  - apiGroups:
+      - coordination.k8s.io
+    resources:
+      - leases
+    verbs:
+      - create"
+"What field in a DaemonSet tolerations allows it to run on master nodes?","tolerations:
+  - key: node-role.kubernetes.io/master
+    operator: Exists
+    effect: NoSchedule"
+"Command to create a ConfigMap from a file for scheduler configuration","kubectl create configmap my-scheduler-config --from-file=/root/my-scheduler-config.yaml -n kube-system"
+"What is the apiVersion for KubeSchedulerConfiguration?","kubescheduler.config.k8s.io/v1"
+"How to specify a scheduler name in KubeSchedulerConfiguration?","profiles:
+  - schedulerName: my-scheduler"
+"Command to get events with wide output to verify scheduler operation","kubectl get events -o wide"
+"Command to check logs of a custom scheduler pod","kubectl logs my-custom-scheduler --namespace=kube-system"
+"What field is used in a pod spec to assign it to a specific node manually?","nodeName (under spec)"
+"Command to get all resources with specific label selectors for security filtering","kubectl get all --selector env=prod,bu=finance,tier=frontend"
+"What operator is used in nodeAffinity to check if a label exists?","Exists"
+"Create a LimitRange that sets default CPU request and limit to 500m","apiVersion: v1
+kind: LimitRange
+metadata:
+  name: cpu-resource-constraint
+spec:
+  limits:
+    - default:
+        cpu: 500m
+      defaultRequest:
+        cpu: 500m
+      type: Container"
+"What happens if a pod exceeds its memory limit?","It may be terminated due to an Out Of Memory (OOM) error"
+"Command to describe a node and check for taints","kubectl describe node kubemaster | grep Taint"
+"How to remove a taint from the controlplane node?","kubectl taint node controlplane node-role.kubernetes.io/master:NoSchedule-"
