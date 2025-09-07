@@ -73,4 +73,47 @@ spec:
     storage: 1Gi
   hostPath:
     path: /tmp/data
+  persistentVolumeReclaimPolicy: Retain
+```
+
+### Persistent Volume Claim
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: myclaim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
+```
+
+Reclaim policy in PVC:
+
+- **Retain**: The PV remains in the cluster after the PVC is deleted. An administrator must manually reclaim it.
+- **Delete**: The PV is automatically deleted along with the PVC, releasing the storage on the physical device.
+- **Recycle**: The PV data is scrubbed before reuse by new claims.
+
+```yaml
+volumes:
+  - name: log-data
+    persistentVolumeClaim:
+      claimName: log-data
+```
+
+### storage class
+
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: platinum
+provisioner: kubernetes.io/gce-pd
+parameters:
+  type: pd-ssd
+  replication-type: regional-pd
+volumeBindingMode: WaitForFirstConsumer
 ```
