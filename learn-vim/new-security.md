@@ -15,26 +15,37 @@ curl -v -k https://master-node-ip:6443/api/v1/pods --header "Authorization: Bear
 
 ## TLS Kubernetes
 
+create and use ssh key for server:
+
+```bash
 ssh-keygen
 cat ~/.ssh/authorized_keys
 ssh -i id_rsa user1@server1
 
-i go to google.com
-google sends public key
-browser uses pub key to generate symetric key
-browser sends data and symetric key to google
-google descrypts data and symmetric key using private key
-following req, res are encrypted with symmetric key
+```
 
-:
+here's how the flow works:
+
+1. i go to google.com
+2. google sends public key
+3. browser uses pub key to generate symetric key
+4. browser sends data and symetric key to google
+5. google descrypts data and symmetric key using private key
+6. following req, res are encrypted with symmetric key
+
+```bash
 openssl genrsa -out my-bank.key 1024
 openssl rsa -in my-bank.key -pubout > mybank.pem
 openssl genrsa -out ca.key 2048 openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 openssl genrsa -out admin.key 2048 openssl req -new -key admin.key -subj "/CN=kube-admin/O=system:masters" -out admin.csr openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
 curl <https://kube-apiserver:6443/api/v1/pods> \ --key admin.key --cert admin.crt --cacert ca.crt
+```
 
-- --key-file=/path-to-certs/etcdserver.key - --cert-file=/path-to-certs/etcdserver.crt
-- --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+find the keys and certificate files in `kube-apiserver.yaml`:
+
+- `--key-file=/path-to-certs/etcdserver.key`
+- `--cert-file=/path-to-certs/etcdserver.crt`
+- `--trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt`
 
 kube-apiserver
 Then, create an OpenSSL configuration file (e.g., openssl.cnf) to include all necessary SANs
