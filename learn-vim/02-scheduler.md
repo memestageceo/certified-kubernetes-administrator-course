@@ -1,7 +1,7 @@
-```markdown
 # Kubernetes manual pod scheduling — important concepts and commands
 
 ## Concepts
+
 - **Automatic scheduling:** The kube-scheduler assigns Pods to Nodes. If it’s not running, Pods stay Pending.
 - **Pending indicator:** In `kubectl describe pod`, `Node: <none>` and no scheduling Events imply no assignment yet.
 - **Manual scheduling:** Set `spec.nodeName` in the Pod manifest to bind directly to a specific Node.
@@ -11,6 +11,7 @@
 ---
 
 ## Diagnose a pending pod
+
 ```bash
 kubectl get pods
 kubectl describe pod <pod-name>
@@ -334,25 +335,25 @@ kubectl apply -f <file>.yaml
 ### solutions
 
 **Q:** How do you list all pods in the `dev` environment?  
-**A:**  
+**A:**
 
 ```bash
 kubectl get pods --selector env=dev
 ```
 
 **Q:** How do you count them without headers?  
-**A:**  
+**A:**
 
 ```bash
 kubectl get pods --selector env=dev --no-headers | wc -l
 ```
 
-💡 *Example:* Output shows `7` pods in `dev`.
+💡 _Example:_ Output shows `7` pods in `dev`.
 
 ---
 
 **Q:** How to count pods in the `finance` BU?  
-**A:**  
+**A:**
 
 ```bash
 kubectl get pods --selector bu=finance --no-headers | wc -l
@@ -363,14 +364,14 @@ kubectl get pods --selector bu=finance --no-headers | wc -l
 ---
 
 **Q:** How to list only `prod` pods?  
-**A:**  
+**A:**
 
 ```bash
 kubectl get pods --selector env=prod --no-headers
 ```
 
 **Q:** How to include all object types (`pods`, `services`, `ReplicaSets`) in `prod`?  
-**A:**  
+**A:**
 
 ```bash
 kubectl get all --selector env=prod --no-headers
@@ -387,7 +388,7 @@ Then pipe to:
 ---
 
 **Q:** How to find the pod in `prod` **AND** `finance` BU **AND** `frontend` tier?  
-**A:**  
+**A:**
 
 ```bash
 kubectl get all --selector env=prod,bu=finance,tier=frontend
@@ -401,7 +402,7 @@ pod/app-1-zzxdf  1/1 Running  0  4m7s
 
 ---
 
-**Q:** Error:  
+**Q:** Error:
 
 ```
 Invalid value: selector does not match template labels
@@ -409,7 +410,7 @@ Invalid value: selector does not match template labels
 
 **Cause:** `spec.selector.matchLabels` **must exactly match** `spec.template.metadata.labels`.
 
-**Original YAML (mismatch)**  
+**Original YAML (mismatch)**
 
 ```yaml
 selector:
@@ -421,7 +422,7 @@ template:
       tier: nginx
 ```
 
-**Fix:** Align template label with selector:  
+**Fix:** Align template label with selector:
 
 ```yaml
 selector:
@@ -440,7 +441,7 @@ kubectl create -f replicaset-definition-1.yaml
 kubectl get rs
 ```
 
-💡 *Tip:* Selector–template label mismatch is one of the most common ReplicaSet creation errors.
+💡 _Tip:_ Selector–template label mismatch is one of the most common ReplicaSet creation errors.
 
 ---
 
@@ -476,10 +477,10 @@ kubectl taint nodes node1 app=blue:NoSchedule
 
 #### Taint Effects
 
-| Effect               | Behavior |
-|----------------------|----------|
-| **NoSchedule**       | Blocks non‑tolerating pods from being scheduled. |
-| **PreferNoSchedule** | Avoids scheduling non‑tolerating pods when possible. |
+| Effect               | Behavior                                                |
+| -------------------- | ------------------------------------------------------- |
+| **NoSchedule**       | Blocks non‑tolerating pods from being scheduled.        |
+| **PreferNoSchedule** | Avoids scheduling non‑tolerating pods when possible.    |
 | **NoExecute**        | Evicts running non‑tolerating pods and blocks new ones. |
 
 ---
